@@ -139,12 +139,24 @@ const certificates: Record<string, any> = {
     id: "CERT-2025-587",
     studentName: "Баймуканова Элеонора",
     courseName: "Certified Business Analysis Professional (CBAP)",
-    completionDate: "20.02.2025",
-    issueDate: "01.03.2025",
+    completionDate: "20.01.2023",
+    issueDate: "31.01.2023",
     duration: "180 часов",
     grade: "Отлично",
     instructor: "IIBA Certified Trainer Петрова А.В.",
     skills: ["Business Analysis", "Requirements Elicitation", "Requirements Analysis", "Business Process Modeling", "Stakeholder Management", "Solution Assessment", "Enterprise Analysis", "BABOK Guide", "Business Process Improvement", "Data Analysis", "Use Case Modeling", "Requirements Documentation"],
+    verified: true
+  },
+  "CERT-2025-588": {
+    id: "CERT-2025-588",
+    studentName: "УРАЗГАЛИЕВ РУСЛАН",
+    courseName: "Тестирование программного обеспечения",
+    completionDate: "25.02.2025",
+    issueDate: "05.03.2025",
+    duration: "150 часов",
+    grade: "Отлично",
+    instructor: "QA Lead Engineer Абдуллин К.С.",
+    skills: ["Manual Testing", "Test Case Design", "Bug Reporting", "Test Planning", "Functional Testing", "Regression Testing", "Integration Testing", "API Testing", "Test Documentation", "Agile Testing", "Test Management", "Quality Assurance"],
     verified: true
   }
 };
@@ -163,7 +175,8 @@ export async function getStaticPaths() {
     { params: { id: "CERT-2025-584" } },
     { params: { id: "CERT-2025-585" } },
     { params: { id: "CERT-2025-586" } },
-    { params: { id: "CERT-2025-587" } }
+    { params: { id: "CERT-2025-587" } },
+    { params: { id: "CERT-2025-588" } }
   ];
 }
 
