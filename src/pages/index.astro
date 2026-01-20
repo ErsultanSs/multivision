@@ -26,24 +26,14 @@ import Layout from '../layouts/Layout.astro';
 
 <script>
     import gsap from "gsap";
-    import Lenis from "lenis";
     import { ScrollTrigger } from "gsap/ScrollTrigger";
     
-    const lenis = new Lenis();
-    lenis.on('scroll', ScrollTrigger.update);
-
-    gsap.ticker.add((time) => {
-        lenis.raf(time * 1000); 
-    });
-    gsap.ticker.lagSmoothing(0);
-
-    function raf(time: number) {
-        lenis.raf(time);
-        requestAnimationFrame(raf);
-    }
-    requestAnimationFrame(raf);
-
     gsap.registerPlugin(ScrollTrigger);
+
+    // Configure ScrollTrigger for better performance
+    ScrollTrigger.config({
+        limitCallbacks: true,
+    });
 
     gsap.fromTo('.about-us-decor', {
                 x: -100,  
@@ -64,7 +54,7 @@ import Layout from '../layouts/Layout.astro';
                     trigger: '.about-us-decor',
                     start: 'top 80%', 
                     end: 'bottom 60%', 
-                    once: false,        
+                    once: true,        
                     markers: false      
                 },
                 
@@ -97,6 +87,7 @@ import Layout from '../layouts/Layout.astro';
         { opacity: 0 },
         { opacity: 1, duration: 1, delay: 1.5 }
     );
+
 
     gsap.fromTo("header",
         {
