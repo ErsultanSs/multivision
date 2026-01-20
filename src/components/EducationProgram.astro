@@ -4,9 +4,9 @@ import Subtitle from "./Subtitle.astro";
 import { Image } from "astro:assets";
 ---
 
-<div id="products"  class="max-w-[1440px] mx-auto flex flex-col gap-8 sm:gap-16 px-[10px] lg:px-12 py-[56px] lg:py-[84px]">
+<div id="products" class="max-w-[1440px] mx-auto flex flex-col gap-8 sm:gap-16 px-[10px] lg:px-12 py-[56px] lg:py-[84px] bg-gray-50">
     <!-- AI Education Courses - Main Focus -->
-    <div class="pl-0 md:pl-16 mx-auto max-w-4xl products-header">
+    <div class="pl-0 md:pl-16 mx-auto max-w-4xl products-header text-center">
         <Title>ИИ-Образование: Будущее начинается здесь</Title>
         <Subtitle>
             Откройте двери в мир искусственного интеллекта вместе с нами! Наши инновационные курсы используют передовые AI-технологии для персонализированного обучения. Мы не просто учим программированию - мы формируем новое поколение ИИ-инноваторов, которые будут создавать будущее Казахстана. Если вы только заканчиваете школу - наша программа лучший выбор для раскрытия таланта на раннем этапе. Присоединяйтесь к революции в образовании!
@@ -15,15 +15,15 @@ import { Image } from "astro:assets";
     
     <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12">
         <!-- Main Program Description -->
-        <div class="education-card bg-gradient-to-br from-[#262626] to-[#1a1a1a] p-8 md:p-10 rounded-3xl border border-white/10 shadow-2xl">
+        <div class="education-card bg-white p-8 md:p-10 rounded-2xl border-2 border-gray-200 shadow-md hover:shadow-xl hover:border-blue-500 transition-all duration-300">
             <div class="mb-6">
-                <h3 class="text-[28px] md:text-[36px] font-medium leading-[110%] tracking-[-2%] mb-4">
+                <h3 class="text-2xl md:text-3xl font-bold text-gray-900 mb-4">
                     О программе
                 </h3>
-                <div class="h-1 w-20 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full"></div>
+                <div class="h-1 w-20 bg-gradient-to-r from-[#0052CC] to-[#4C9AFF] rounded-full"></div>
             </div>
             
-            <div class="space-y-4 text-[16px] md:text-[18px] text-white/80 leading-relaxed">
+            <div class="space-y-4 text-base md:text-lg text-gray-700 leading-relaxed">
                 <p>
                     Проект объединяет обучение практическим навыкам в сфере IT, искусственного интеллекта, 
                     веб-разработки с созданием реальных работающих продуктов и их коммерциализацией.
@@ -36,36 +36,44 @@ import { Image } from "astro:assets";
         </div>
 
         <!-- Key Goals -->
-        <div class="education-card bg-gradient-to-br from-[#262626] to-[#1a1a1a] p-8 md:p-10 rounded-3xl border border-white/10 shadow-2xl">
+        <div class="education-card bg-white p-8 md:p-10 rounded-2xl border-2 border-gray-200 shadow-md hover:shadow-xl hover:border-green-600 transition-all duration-300">
             <div class="mb-6">
-                <h3 class="text-[28px] md:text-[36px] font-medium leading-[110%] tracking-[-2%] mb-4">
+                <h3 class="text-2xl md:text-3xl font-bold text-gray-900 mb-4">
                     Основные задачи
                 </h3>
-                <div class="h-1 w-20 bg-gradient-to-r from-green-500 to-blue-500 rounded-full"></div>
+                <div class="h-1 w-20 bg-gradient-to-r from-green-600 to-[#00B8D9] rounded-full"></div>
             </div>
             
             <ul class="space-y-4">
                 <li class="flex gap-3 items-start">
-                    <div class="mt-1.5 w-2 h-2 rounded-full bg-green-400 flex-shrink-0"></div>
-                    <span class="text-[16px] md:text-[18px] text-white/80">
+                    <svg class="w-6 h-6 text-green-600 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                    </svg>
+                    <span class="text-base md:text-lg text-gray-700">
                         Обучение созданию конкурентоспособных продуктов с использованием ИИ
                     </span>
                 </li>
                 <li class="flex gap-3 items-start">
-                    <div class="mt-1.5 w-2 h-2 rounded-full bg-blue-400 flex-shrink-0"></div>
-                    <span class="text-[16px] md:text-[18px] text-white/80">
+                    <svg class="w-6 h-6 text-blue-600 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                    </svg>
+                    <span class="text-base md:text-lg text-gray-700">
                         Формирование компетенций в сфере ИИ и информационных технологий
                     </span>
                 </li>
                 <li class="flex gap-3 items-start">
-                    <div class="mt-1.5 w-2 h-2 rounded-full bg-purple-400 flex-shrink-0"></div>
-                    <span class="text-[16px] md:text-[18px] text-white/80">
+                    <svg class="w-6 h-6 text-purple-600 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                    </svg>
+                    <span class="text-base md:text-lg text-gray-700">
                         Создание активного IT-сообщества в Алматы
                     </span>
                 </li>
                 <li class="flex gap-3 items-start">
-                    <div class="mt-1.5 w-2 h-2 rounded-full bg-pink-400 flex-shrink-0"></div>
-                    <span class="text-[16px] md:text-[18px] text-white/80">
+                    <svg class="w-6 h-6 text-pink-600 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                    </svg>
+                    <span class="text-base md:text-lg text-gray-700">
                         Развитие молодежного технологического предпринимательства
                     </span>
                 </li>
@@ -75,72 +83,72 @@ import { Image } from "astro:assets";
 
     <!-- Statistics Grid -->
     <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 mt-8">
-        <div class="stat-card bg-[#262626] p-6 rounded-2xl border border-white/10 text-center hover:border-blue-500/50 transition-all duration-300">
-            <div class="text-[32px] md:text-[42px] font-bold bg-gradient-to-r from-blue-400 to-blue-600 bg-clip-text text-transparent">
+        <div class="stat-card bg-white p-6 rounded-xl border-2 border-gray-200 text-center hover:border-blue-500 hover:shadow-lg transition-all duration-300">
+            <div class="text-3xl md:text-5xl font-bold bg-gradient-to-r from-[#0052CC] to-[#4C9AFF] bg-clip-text text-transparent">
                 10K
             </div>
-            <div class="text-[12px] md:text-[14px] text-white/60 mt-2">
+            <div class="text-xs md:text-sm text-gray-600 mt-2 font-medium">
                 учащихся на этапе отбора
             </div>
         </div>
 
-        <div class="stat-card bg-[#262626] p-6 rounded-2xl border border-white/10 text-center hover:border-purple-500/50 transition-all duration-300">
-            <div class="text-[32px] md:text-[42px] font-bold bg-gradient-to-r from-purple-400 to-purple-600 bg-clip-text text-transparent">
+        <div class="stat-card bg-white p-6 rounded-xl border-2 border-gray-200 text-center hover:border-purple-600 hover:shadow-lg transition-all duration-300">
+            <div class="text-3xl md:text-5xl font-bold bg-gradient-to-r from-purple-600 to-purple-800 bg-clip-text text-transparent">
                 1K
             </div>
-            <div class="text-[12px] md:text-[14px] text-white/60 mt-2">
+            <div class="text-xs md:text-sm text-gray-600 mt-2 font-medium">
                 участников в программе
             </div>
         </div>
 
-        <div class="stat-card bg-[#262626] p-6 rounded-2xl border border-white/10 text-center hover:border-green-500/50 transition-all duration-300">
-            <div class="text-[32px] md:text-[42px] font-bold bg-gradient-to-r from-green-400 to-green-600 bg-clip-text text-transparent">
+        <div class="stat-card bg-white p-6 rounded-xl border-2 border-gray-200 text-center hover:border-green-600 hover:shadow-lg transition-all duration-300">
+            <div class="text-3xl md:text-5xl font-bold bg-gradient-to-r from-green-600 to-green-800 bg-clip-text text-transparent">
                 1K+
             </div>
-            <div class="text-[12px] md:text-[14px] text-white/60 mt-2">
+            <div class="text-xs md:text-sm text-gray-600 mt-2 font-medium">
                 веб-приложений с ИИ
             </div>
         </div>
 
-        <div class="stat-card bg-[#262626] p-6 rounded-2xl border border-white/10 text-center hover:border-yellow-500/50 transition-all duration-300">
-            <div class="text-[32px] md:text-[42px] font-bold bg-gradient-to-r from-yellow-400 to-yellow-600 bg-clip-text text-transparent">
+        <div class="stat-card bg-white p-6 rounded-xl border-2 border-gray-200 text-center hover:border-yellow-600 hover:shadow-lg transition-all duration-300">
+            <div class="text-3xl md:text-5xl font-bold bg-gradient-to-r from-yellow-600 to-orange-600 bg-clip-text text-transparent">
                 3
             </div>
-            <div class="text-[12px] md:text-[14px] text-white/60 mt-2">
+            <div class="text-xs md:text-sm text-gray-600 mt-2 font-medium">
                 хакатона по 24 часа
             </div>
         </div>
 
-        <div class="stat-card bg-[#262626] p-6 rounded-2xl border border-white/10 text-center hover:border-pink-500/50 transition-all duration-300">
-            <div class="text-[32px] md:text-[42px] font-bold bg-gradient-to-r from-pink-400 to-pink-600 bg-clip-text text-transparent">
+        <div class="stat-card bg-white p-6 rounded-xl border-2 border-gray-200 text-center hover:border-pink-600 hover:shadow-lg transition-all duration-300">
+            <div class="text-3xl md:text-5xl font-bold bg-gradient-to-r from-pink-600 to-rose-600 bg-clip-text text-transparent">
                 TOP 10
             </div>
-            <div class="text-[12px] md:text-[14px] text-white/60 mt-2">
+            <div class="text-xs md:text-sm text-gray-600 mt-2 font-medium">
                 проектов на демо-дне
             </div>
         </div>
 
-        <div class="stat-card bg-[#262626] p-6 rounded-2xl border border-white/10 text-center hover:border-red-500/50 transition-all duration-300">
-            <div class="text-[32px] md:text-[42px] font-bold bg-gradient-to-r from-red-400 to-red-600 bg-clip-text text-transparent">
+        <div class="stat-card bg-white p-6 rounded-xl border-2 border-gray-200 text-center hover:border-red-600 hover:shadow-lg transition-all duration-300">
+            <div class="text-3xl md:text-5xl font-bold bg-gradient-to-r from-red-600 to-red-800 bg-clip-text text-transparent">
                 USA
             </div>
-            <div class="text-[12px] md:text-[14px] text-white/60 mt-2">
+            <div class="text-xs md:text-sm text-gray-600 mt-2 font-medium">
                 поездка в Кремниевую долину
             </div>
         </div>
     </div>
 
     <!-- Expected Results -->
-    <div class="education-result mt-8 bg-gradient-to-r from-[#262626] via-[#1f1f1f] to-[#262626] p-8 md:p-12 rounded-3xl border border-white/10 shadow-2xl">
+    <div class="education-result mt-8 bg-gradient-to-r from-blue-50 via-purple-50 to-pink-50 p-8 md:p-12 rounded-2xl border-2 border-gray-200 shadow-md">
         <div class="max-w-4xl mx-auto text-center">
-            <h3 class="text-[28px] md:text-[36px] lg:text-[42px] font-medium leading-[110%] tracking-[-2%] mb-6">
+            <h3 class="text-2xl md:text-3xl lg:text-4xl font-bold text-gray-900 mb-6">
                 Ожидаемый результат
             </h3>
-            <div class="h-1 w-24 bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 rounded-full mx-auto mb-8"></div>
-            <p class="text-[16px] md:text-[20px] text-white/80 leading-relaxed">
+            <div class="h-1 w-24 bg-gradient-to-r from-[#0052CC] via-[#5243AA] to-[#00B8D9] rounded-full mx-auto mb-8"></div>
+            <p class="text-base md:text-xl text-gray-700 leading-relaxed">
                 К концу программы каждый участник создает функционирующее веб-приложение с использованием технологий ИИ, 
                 получает опыт предпринимательства и готовность к коммерциализации своего проекта. 
-                <span class="text-white font-medium">
+                <span class="text-gray-900 font-semibold">
                     Лучшие проекты получают возможность международного развития и представления на глобальном рынке.
                 </span>
             </p>
@@ -150,20 +158,19 @@ import { Image } from "astro:assets";
 
 <style>
     .education-card {
-        transition: all 0.3s ease;
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     }
     
     .education-card:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+        transform: translateY(-4px);
     }
 
     .stat-card {
-        transition: all 0.3s ease;
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     }
 
     .stat-card:hover {
-        transform: translateY(-5px) scale(1.05);
+        transform: translateY(-4px) scale(1.02);
     }
 </style>
 

@@ -42,7 +42,60 @@ const canonical = Astro.url?.href ?? undefined;
 		{canonical && <meta property="og:url" content={canonical} />}
 		{ogImage && <meta property="og:image" content={ogImage} />}
 	</head>
-	<body class="antialiased font-inter bg-black text-white max-w-[1920px] mx-auto">
+	<body class="antialiased font-inter bg-white text-gray-900 max-w-[1920px] mx-auto">
 		<slot />
 	</body>
 </html>
+
+<style is:global>
+	:root {
+		/* Primary Colors - Professional Blue */
+		--color-primary: #0052CC;
+		--color-primary-light: #4C9AFF;
+		--color-primary-dark: #003D99;
+		--color-primary-50: #E6F0FF;
+		--color-primary-100: #CCE0FF;
+		
+		/* Backgrounds */
+		--color-bg-primary: #FFFFFF;
+		--color-bg-secondary: #F7F9FC;
+		--color-bg-tertiary: #FAFBFC;
+		
+		/* Borders */
+		--color-border-light: #E1E8ED;
+		--color-border-medium: #C1C7D0;
+		--color-border-dark: #97A0AF;
+		
+		/* Text Colors */
+		--color-text-primary: #172B4D;
+		--color-text-secondary: #5E6C84;
+		--color-text-tertiary: #97A0AF;
+		
+		/* Accent Colors */
+		--color-accent-purple: #5243AA;
+		--color-accent-teal: #00B8D9;
+		--color-success: #00875A;
+		--color-warning: #FF8B00;
+		
+		/* Shadows */
+		--shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.08);
+		--shadow-md: 0 4px 6px rgba(0, 0, 0, 0.07), 0 2px 4px rgba(0, 0, 0, 0.05);
+		--shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.08), 0 4px 6px rgba(0, 0, 0, 0.05);
+		--shadow-xl: 0 20px 25px rgba(0, 0, 0, 0.1), 0 10px 10px rgba(0, 0, 0, 0.04);
+		
+		/* Gradients */
+		--gradient-primary: linear-gradient(135deg, #0052CC 0%, #4C9AFF 100%);
+		--gradient-accent: linear-gradient(135deg, #5243AA 0%, #00B8D9 100%);
+	}
+	
+	/* Smooth scrolling */
+	html {
+		scroll-behavior: smooth;
+	}
+	
+	/* Selection color */
+	::selection {
+		background-color: var(--color-primary-100);
+		color: var(--color-primary-dark);
+	}
+</style>

@@ -3,17 +3,17 @@ import { Image } from "astro:assets";
 import logoIcon from "../assets/logo.svg";
 ---
 
-<header class="mx-auto flex flex-row justify-between items-center text-white max-w-[1340px] w-full">
+<header class="mx-auto flex flex-row justify-between items-center text-gray-900 max-w-[1340px] w-full">
     <Image src={logoIcon} alt="Multivision Логотип"/>
 
-    <nav class="hidden md:flex font-medium gap-6 lg:gap-12 list-none tracking-[-4.5%] text-[14px]">
-        <li class="cursor-pointer hover:text-gray-300"><a href="/#about">О нас</a></li>
-        <li class="cursor-pointer hover:text-gray-300"><a href="/#products">Продукты</a></li>
-        <li class="cursor-pointer hover:text-gray-300"><a href="/solutions/ris">Решения</a></li>
-        <li class="cursor-pointer hover:text-gray-300"><a href="/courses">Курсы</a></li>
-        <li class="cursor-pointer hover:text-gray-300"><a href="/#whyus">Почему мы</a></li>
-        <li class="cursor-pointer hover:text-gray-300"><a href="/#contacts">Контакты</a></li>
+    <nav class="hidden md:flex font-medium gap-6 lg:gap-12 list-none text-sm">
+        <li class="cursor-pointer hover:text-[#0052CC] transition-colors"><a href="/#about">О нас</a></li>
+        <li class="cursor-pointer hover:text-[#0052CC] transition-colors"><a href="/#portfolio">Продукты</a></li>
+        <li class="cursor-pointer hover:text-[#0052CC] transition-colors"><a href="/solutions/ris">Решения</a></li>
+        <li class="cursor-pointer hover:text-[#0052CC] transition-colors"><a href="/courses">Курсы</a></li>
+        <li class="cursor-pointer hover:text-[#0052CC] transition-colors"><a href="/#whyus">Почему мы</a></li>
+        <li class="cursor-pointer hover:text-[#0052CC] transition-colors"><a href="/#contacts">Контакты</a></li>
     </nav>
 
-    <button class="uppercase px-[27px] md:px-11 py-[11px] md:py-[18px] text-[12px] bg-white text-black rounded-[30px] tracking-[21%] leading-[12px] shadow-header-button hover:bg-gray-200" onclick="window.location.href='mailto:llcmultivision@gmail.com'">Подать заявку</button>
+    <button class="uppercase px-[27px] md:px-11 py-[11px] md:py-[18px] text-[12px] bg-gradient-to-r from-[#0052CC] to-[#4C9AFF] text-white rounded-full tracking-wide leading-[12px] shadow-lg hover:shadow-xl transition-all hover:-translate-y-0.5" onclick="window.location.href='mailto:llcmultivision@gmail.com'">Подать заявку</button>
 </header>

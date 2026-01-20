@@ -2,7 +2,6 @@
 import Header from '../components/Header.astro';
 import Hero from "../components/Hero.astro";
 import AboutUs from "../components/AboutUs.astro";
-import Services from "../components/Services.astro";
 import OurProducts from '../components/OurProducts.astro';
 import EducationProgram from '../components/EducationProgram.astro';
 import Portfolio from '../components/Portfolio.astro';
@@ -12,16 +11,14 @@ import Layout from '../layouts/Layout.astro';
 
 ---
 <Layout>
-    <div class="flex flex-col bg-no-repeat bg-cover bg-center bg-[url('/src/assets/hero-bg.jpg')] min-h-[675px] px-[10px] lg:px-12 py-[22px] lg:py-[34px]">
+    <div class="flex flex-col bg-gradient-to-br from-blue-50/30 via-white to-purple-50/30 min-h-[675px] px-[10px] lg:px-12 py-[22px] lg:py-[34px]">
         <Header/>
         <Hero/>
     </div>
-    <Services/>
     <EducationProgram/>
     <OurProducts/>
     <Portfolio/>
-    <div class="relative flex flex-col bg-no-repeat bg-cover bg-center bg-[url('/src/assets/bottom-bg.jpg')] min-h-[675px]">
-        <div class="lg:hidden absolute top-0 left-0 right-0 bottom-0 inset-0 bg-black/50 w-full h-full z-10"/>
+    <div class="relative flex flex-col bg-gradient-to-br from-gray-50 to-blue-50/30 min-h-[675px]">
         <WhyUs/>
         <Contacts/>
     </div>

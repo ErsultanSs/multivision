@@ -1,14 +1,101 @@
-<div id="home" class="z-10 w-full flex flex-col justify-end sm:items-center sm:justify-center text-white flex-1">
-    <div class="flex flex-col gap-4 md:gap-8 max-w-[500px] md:max-w-[700px] lg:max-w-[1000px] w-full md:mx-auto">
-        <div class="font-medium select-none text-wrap text-[28px] sm:text-[44px] md:text-[60px] lg:text-[82px] leading-[86.7%] tracking-[-4.5%] hero-title">
-            <div class="flex sm:justify-center"><h1>Воплощаем идеи</h1></div>
-            <div class="flex sm:justfiy-start"><h1>создавая решения</h1></div>
-            <div class="flex sm:justify-end "><h1>изменяя представления</h1></div>
+<div id="home" class="z-10 w-full flex flex-col justify-center items-center text-gray-900 flex-1 relative py-16 md:py-24">
+    <!-- Subtle gradient background -->
+    <div class="absolute inset-0 bg-gradient-to-br from-blue-50 via-white to-purple-50 opacity-60"></div>
+    
+    <div class="flex flex-col gap-8 md:gap-12 max-w-[500px] md:max-w-[700px] lg:max-w-[1200px] w-full mx-auto relative z-10 px-6">
+        <!-- Trust indicators -->
+        <div class="flex flex-wrap justify-center gap-8 md:gap-12 pb-6 border-b border-gray-200">
+            <div class="text-center">
+                <div class="text-3xl md:text-4xl font-bold text-primary bg-gradient-to-r from-[#0052CC] to-[#4C9AFF] bg-clip-text text-transparent">10+</div>
+                <div class="text-sm md:text-base text-gray-600 mt-1">Лет опыта</div>
+            </div>
+            <div class="text-center">
+                <div class="text-3xl md:text-4xl font-bold text-primary bg-gradient-to-r from-[#0052CC] to-[#4C9AFF] bg-clip-text text-transparent">50+</div>
+                <div class="text-sm md:text-base text-gray-600 mt-1">Проектов</div>
+            </div>
+            <div class="text-center">
+                <div class="text-3xl md:text-4xl font-bold text-primary bg-gradient-to-r from-[#0052CC] to-[#4C9AFF] bg-clip-text text-transparent">100%</div>
+                <div class="text-sm md:text-base text-gray-600 mt-1">Удовлетворенность</div>
+            </div>
         </div>
-        <div class="w-full flex text-left sm:text-center md:text-left justify-start sm:justify-center md:justify-end hero-description">
-            <p class="font-normal max-w-[424px] text-[14px] md:text-[18px]">
-                Мы — Multivision, инновационная IT-компания с более чем 10-летним опытом работы на рынке, специализирующаяся на разработке приложений любой сложности и разработке серверной системы, обеспечивающей наилучшие результаты для вашей организации. Выбирайте из высококачественных стоечных серверов, сервера SKSIO, серверов в корпусе Tower, серверных рабочих станций, серверов PowerEdge и многого другого.
+        
+        <!-- Main heading with professional typography -->
+        <div class="text-center hero-title">
+            <h1 class="font-bold text-[36px] sm:text-[54px] md:text-[68px] lg:text-[82px] leading-tight tracking-tight mb-6">
+                <span class="block bg-gradient-to-r from-[#0052CC] via-[#4C9AFF] to-[#0052CC] bg-clip-text text-transparent animate-gradient">
+                    Воплощаем идеи
+                </span>
+                <span class="block text-gray-800 mt-2">
+                    создавая решения
+                </span>
+                <span class="block bg-gradient-to-r from-[#5243AA] to-[#00B8D9] bg-clip-text text-transparent">
+                    изменяя будущее
+                </span>
+            </h1>
+        </div>
+        
+        <!-- Value proposition -->
+        <div class="text-center max-w-3xl mx-auto hero-description">
+            <p class="text-lg md:text-xl leading-relaxed text-gray-700 mb-8">
+                <span class="font-semibold text-gray-900">Multivision</span> — инновационная IT-компания с более чем 
+                <span class="font-semibold text-[#0052CC]">10-летним опытом</span> работы на рынке. 
+                Специализируемся на разработке <span class="font-semibold">мобильных и веб-приложений</span> для корпоративных и государственных клиентов, 
+                внедрении <span class="font-semibold">AI-решений</span> и создании технологий мирового класса.
             </p>
+            
+            <!-- Professional CTAs -->
+            <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                <a href="#contacts" class="group inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-[#0052CC] to-[#4C9AFF] rounded-lg font-semibold text-white shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 min-w-[200px]">
+                    <span>Начать проект</span>
+                    <svg class="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
+                    </svg>
+                </a>
+                <a href="#portfolio" class="inline-flex items-center justify-center px-8 py-4 bg-white rounded-lg font-semibold text-[#0052CC] border-2 border-[#0052CC] hover:bg-[#0052CC] hover:text-white transition-all duration-300 hover:-translate-y-1 min-w-[200px] shadow-md">
+                    Наши проекты
+                </a>
+            </div>
+        </div>
+        
+        <!-- Key benefits badges -->
+        <div class="flex flex-wrap justify-center gap-4 mt-8">
+            <div class="px-4 py-2 bg-white rounded-full shadow-sm border border-gray-200 text-sm font-medium text-gray-700">
+                <span class="text-[#0052CC]">✓</span> Государственные контракты
+            </div>
+            <div class="px-4 py-2 bg-white rounded-full shadow-sm border border-gray-200 text-sm font-medium text-gray-700">
+                <span class="text-[#0052CC]">✓</span> Корпоративные решения
+            </div>
+            <div class="px-4 py-2 bg-white rounded-full shadow-sm border border-gray-200 text-sm font-medium text-gray-700">
+                <span class="text-[#0052CC]">✓</span> AI-технологии
+            </div>
         </div>
     </div>
 </div>
+
+<style>
+    @keyframes gradient {
+        0%, 100% { background-position: 0% 50%; }
+        50% { background-position: 100% 50%; }
+    }
+    
+    .animate-gradient {
+        background-size: 200% auto;
+        animation: gradient 4s ease infinite;
+    }
+    
+    /* Fade in animation */
+    @keyframes fadeInUp {
+        from {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+    
+    .hero-title, .hero-description {
+        animation: fadeInUp 0.8s ease-out;
+    }
+</style>
