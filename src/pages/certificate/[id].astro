@@ -158,6 +158,20 @@ const certificates: Record<string, any> = {
     instructor: "QA Lead Engineer Абдуллин К.С.",
     skills: ["Manual Testing", "Test Case Design", "Bug Reporting", "Test Planning", "Functional Testing", "Regression Testing", "Integration Testing", "API Testing", "Test Documentation", "Agile Testing", "Test Management", "Quality Assurance"],
     verified: true
+  },
+  "CERT-2023-589": {
+    id: "CERT-2023-589",
+    studentName: "Ергали Даулетбек",
+    courseName: "UX/UI дизайн с Figma - с нуля до эксперата",
+    completionDate: "15.11.2023",
+    issueDate: "20.11.2023",
+    duration: "120 часов",
+    grade: "Отлично",
+    instructor: "UX/UI Designer Алишер",
+    skills: ["Figma", "UI Design", "UX Design", "User Research", "Prototyping", "Design Systems", "Wireframing", "Visual Design", "Interaction Design", "Design Thinking", "User Interface", "User Experience"],
+    verified: true,
+    period: "12.05.2023 - 15.11.2023",
+    deadline: "15.11.2026"
   }
 };
 
@@ -176,7 +190,8 @@ export async function getStaticPaths() {
     { params: { id: "CERT-2025-585" } },
     { params: { id: "CERT-2025-586" } },
     { params: { id: "CERT-2023-587" } },
-    { params: { id: "CERT-2022-588" } }
+    { params: { id: "CERT-2022-588" } },
+    { params: { id: "CERT-2023-589" } }
   ];
 }
 
@@ -301,6 +316,18 @@ console.log('Certificate found:', certificate ? certificate.studentName : 'null'
                       <span class="text-white/70 font-medium">Дата выдачи:</span>
                       <p class="text-white font-bold">{certificate.issueDate}</p>
                     </div>
+                    {certificate.period && (
+                      <div>
+                        <span class="text-white/70 font-medium">Период обучения:</span>
+                        <p class="text-white font-bold">{certificate.period}</p>
+                      </div>
+                    )}
+                    {certificate.deadline && (
+                      <div>
+                        <span class="text-white/70 font-medium">Срок действия до:</span>
+                        <p class="text-white font-bold">{certificate.deadline}</p>
+                      </div>
+                    )}
                   </div>
                 </div>
               </div>
