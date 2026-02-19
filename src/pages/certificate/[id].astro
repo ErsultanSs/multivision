@@ -172,6 +172,19 @@ const certificates: Record<string, any> = {
     verified: true,
     period: "12.05.2023 - 15.11.2023",
     deadline: "15.11.2026"
+  },
+  "CERT-2025-590": {
+    id: "CERT-2025-590",
+    studentName: "ҚАРАБАЕВ БАҚЫТЖАН",
+    courseName: "Управление информационной безопасностью по ISO/IEC 27002:2022",
+    completionDate: "28.05.2025",
+    issueDate: "30.05.2025",
+    duration: "280 часов",
+    grade: "Отлично",
+    instructor: "—",
+    skills: ["ISO/IEC 27002:2022", "Information Security", "ISMS", "Security Controls", "Risk Management", "Policies and Procedures", "Audit Readiness", "Access Control", "Incident Management", "Asset Management", "Compliance"],
+    verified: true,
+    period: "03.04.2025-28.05.2025"
   }
 };
 
@@ -191,7 +204,8 @@ export async function getStaticPaths() {
     { params: { id: "CERT-2025-586" } },
     { params: { id: "CERT-2023-587" } },
     { params: { id: "CERT-2022-588" } },
-    { params: { id: "CERT-2023-589" } }
+    { params: { id: "CERT-2023-589" } },
+    { params: { id: "CERT-2025-590" } }
   ];
 }
 
