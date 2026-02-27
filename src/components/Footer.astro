@@ -1,0 +1,85 @@
+---
+import { Image } from "astro:assets";
+import logoIcon from "../assets/logo.svg";
+---
+
+<footer class="bg-[#003D99] text-white relative overflow-hidden">
+    <!-- Subtle background pattern -->
+    <div class="absolute inset-0 opacity-5">
+        <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+                <pattern id="footer-grid" x="0" y="0" width="40" height="40" patternUnits="userSpaceOnUse">
+                    <path d="M 40 0 L 0 0 0 40" fill="none" stroke="white" stroke-width="0.5"/>
+                </pattern>
+            </defs>
+            <rect width="100%" height="100%" fill="url(#footer-grid)" />
+        </svg>
+    </div>
+
+    <div class="relative z-10 max-w-[1200px] mx-auto px-6 lg:px-8 pt-16 md:pt-20 pb-8">
+        <!-- Footer columns -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-12 mb-12">
+            <!-- Column 1: Brand -->
+            <div class="sm:col-span-2 lg:col-span-1">
+                <div class="mb-5">
+                    <Image src={logoIcon} alt="Multivision" class="h-[50px] w-auto brightness-0 invert"/>
+                </div>
+                <p class="text-white/70 text-sm leading-relaxed mb-6">
+                    Ваши идеи — наш код. Инновационные IT-решения с 10+ летним опытом для бизнеса и государственного сектора.
+                </p>
+                <div>
+                    <h4 class="text-sm font-semibold uppercase tracking-wider mb-3 text-white/90">Контакты</h4>
+                    <a href="mailto:llcmultivision@gmail.com" class="text-white/70 text-sm hover:text-white transition-colors">
+                        llcmultivision@gmail.com
+                    </a>
+                </div>
+            </div>
+
+            <!-- Column 2: Products -->
+            <div>
+                <h4 class="text-sm font-semibold uppercase tracking-wider mb-5 text-white/90">Продукты</h4>
+                <ul class="space-y-3">
+                    <li><a href="/#portfolio" class="text-white/60 text-sm hover:text-white transition-colors">ЧС Алматы</a></li>
+                    <li><a href="/#portfolio" class="text-white/60 text-sm hover:text-white transition-colors">Quick AI</a></li>
+                    <li><a href="/#portfolio" class="text-white/60 text-sm hover:text-white transition-colors">Azbuka 4D</a></li>
+                    <li><a href="/solutions/ris" class="text-white/60 text-sm hover:text-white transition-colors">РИС</a></li>
+                </ul>
+            </div>
+
+            <!-- Column 3: Services -->
+            <div>
+                <h4 class="text-sm font-semibold uppercase tracking-wider mb-5 text-white/90">Услуги</h4>
+                <ul class="space-y-3">
+                    <li><a href="/#whyus" class="text-white/60 text-sm hover:text-white transition-colors">Искусственный интеллект</a></li>
+                    <li><a href="/#whyus" class="text-white/60 text-sm hover:text-white transition-colors">VR/AR разработка</a></li>
+                    <li><a href="/#whyus" class="text-white/60 text-sm hover:text-white transition-colors">Мобильная разработка</a></li>
+                    <li><a href="/#whyus" class="text-white/60 text-sm hover:text-white transition-colors">Веб-разработка</a></li>
+                    <li><a href="/#whyus" class="text-white/60 text-sm hover:text-white transition-colors">DevOps</a></li>
+                </ul>
+            </div>
+
+            <!-- Column 4: Company -->
+            <div>
+                <h4 class="text-sm font-semibold uppercase tracking-wider mb-5 text-white/90">Компания</h4>
+                <ul class="space-y-3">
+                    <li><a href="/#about" class="text-white/60 text-sm hover:text-white transition-colors">О нас</a></li>
+                    <li><a href="/#whyus" class="text-white/60 text-sm hover:text-white transition-colors">Почему мы</a></li>
+                    <li><a href="/courses" class="text-white/60 text-sm hover:text-white transition-colors">Курсы</a></li>
+                    <li><a href="/#contacts" class="text-white/60 text-sm hover:text-white transition-colors">Контакты</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Divider -->
+        <div class="border-t border-white/10 pt-8">
+            <div class="flex flex-col sm:flex-row justify-between items-center gap-4">
+                <p class="text-white/50 text-sm">
+                    &copy; {new Date().getFullYear()} Multivision LLC. Все права защищены.
+                </p>
+                <p class="text-white/50 text-sm">
+                    Алматы, Казахстан
+                </p>
+            </div>
+        </div>
+    </div>
+</footer>

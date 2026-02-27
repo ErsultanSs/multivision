@@ -5,39 +5,130 @@ import phoneIcon from "../assets/phone-icon.svg";
 import messageIcon from "../assets/message-icon.svg";
 ---
 
-<div id="contacts" class="flex flex-col items-center justify-center px-[10px] lg:px-12 py-[56px] lg:py-[84px] z-30 contact-section bg-white">
-    <h6 class="font-bold text-center text-wrap text-3xl sm:text-5xl lg:text-6xl leading-tight text-gray-900 mb-12">
-        Наши контактные данные    
-    </h6>
+<section id="contacts" class="py-16 md:py-24 bg-gray-50 contact-section">
+    <div class="max-w-[1200px] mx-auto px-6 lg:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16">
+            <!-- Left: Contact form -->
+            <div class="bg-white rounded-2xl shadow-lg p-8 md:p-10 lg:p-12">
+                <h3 class="text-2xl md:text-3xl font-bold text-gray-900 mb-2">
+                    Нужна консультация?
+                </h3>
+                <p class="text-gray-600 mb-8">
+                    Заполните форму и мы свяжемся с вами в ближайшее время
+                </p>
 
-    <div class="flex flex-col lg:flex-row justify-center gap-8 lg:gap-12">
-        <div class="flex flex-row items-center gap-4 p-6 bg-gray-50 rounded-xl hover:bg-blue-50 hover:shadow-md transition-all duration-300">
-            <div class="p-5 bg-gradient-to-r from-[#0052CC] to-[#4C9AFF] rounded-full transition-transform duration-300 hover:scale-110">
-                <Image src={locationIcon} alt="Иконка местоположения"/>
+                <form id="contact-form" class="space-y-5">
+                    <div>
+                        <label for="name" class="block text-sm font-medium text-gray-700 mb-1.5">Имя *</label>
+                        <input 
+                            type="text" 
+                            id="name" 
+                            name="name" 
+                            required
+                            placeholder="Ваше имя"
+                            class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#0052CC]/20 focus:border-[#0052CC] transition-all outline-none text-gray-900"
+                        />
+                    </div>
+                    <div>
+                        <label for="email" class="block text-sm font-medium text-gray-700 mb-1.5">Email *</label>
+                        <input 
+                            type="email" 
+                            id="email" 
+                            name="email" 
+                            required
+                            placeholder="email@example.com"
+                            class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#0052CC]/20 focus:border-[#0052CC] transition-all outline-none text-gray-900"
+                        />
+                    </div>
+                    <div>
+                        <label for="phone" class="block text-sm font-medium text-gray-700 mb-1.5">Телефон *</label>
+                        <input 
+                            type="tel" 
+                            id="phone" 
+                            name="phone" 
+                            required
+                            placeholder="+7 (___) ___-__-__"
+                            class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#0052CC]/20 focus:border-[#0052CC] transition-all outline-none text-gray-900"
+                        />
+                    </div>
+                    <div>
+                        <label for="message" class="block text-sm font-medium text-gray-700 mb-1.5">Сообщение *</label>
+                        <textarea 
+                            id="message" 
+                            name="message" 
+                            rows="4"
+                            required
+                            placeholder="Опишите ваш проект или задачу..."
+                            class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#0052CC]/20 focus:border-[#0052CC] transition-all outline-none text-gray-900 resize-none"
+                        ></textarea>
+                    </div>
+                    <button 
+                        type="submit"
+                        class="w-full px-8 py-4 bg-gradient-to-r from-[#0052CC] to-[#4C9AFF] text-white font-semibold rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-0.5 text-base"
+                    >
+                        Отправить сообщение
+                    </button>
+                </form>
+
+                <!-- Success message (hidden by default) -->
+                <div id="form-success" class="hidden mt-6 p-4 bg-green-50 border border-green-200 rounded-lg text-center">
+                    <p class="text-green-700 font-medium">Спасибо! Мы получили ваше сообщение и скоро свяжемся с вами.</p>
+                </div>
             </div>
-            <p class="w-[290px] text-base md:text-lg leading-relaxed text-gray-700 font-medium">Алматы, улица Кенесары хана, 54/19</p>
-        </div>
-        <div class="flex flex-row items-center gap-4 p-6 bg-gray-50 rounded-xl hover:bg-blue-50 hover:shadow-md transition-all duration-300 cursor-pointer" data-phone>
-            <div class="p-5 bg-gradient-to-r from-[#0052CC] to-[#4C9AFF] rounded-full transition-transform duration-300 hover:scale-110">
-                <Image src={phoneIcon} alt="Иконка телефона"/>
+
+            <!-- Right: Info and description -->
+            <div class="flex flex-col justify-center">
+                <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-6 leading-tight">
+                    Свяжитесь с нами и мы поможем вашему бизнесу<span class="text-[#0052CC]">.</span>
+                </h2>
+                <p class="text-base md:text-lg text-gray-600 leading-relaxed mb-10">
+                    Мы всегда готовы обсудить ваш проект и предложить оптимальное решение. 
+                    Наша команда экспертов поможет воплотить вашу идею в жизнь — от концепции до реализации.
+                </p>
+
+                <!-- Contact details -->
+                <div class="space-y-5">
+                    <div class="flex items-center gap-4 p-4 bg-white rounded-xl hover:shadow-md transition-all duration-300">
+                        <div class="p-3 bg-gradient-to-r from-[#0052CC] to-[#4C9AFF] rounded-full flex-shrink-0">
+                            <Image src={locationIcon} alt="Иконка местоположения" class="w-5 h-5"/>
+                        </div>
+                        <p class="text-base text-gray-700 font-medium">Алматы, улица Кенесары хана, 54/19</p>
+                    </div>
+                    <a href="tel:+77770070709" class="flex items-center gap-4 p-4 bg-white rounded-xl hover:shadow-md transition-all duration-300">
+                        <div class="p-3 bg-gradient-to-r from-[#0052CC] to-[#4C9AFF] rounded-full flex-shrink-0">
+                            <Image src={phoneIcon} alt="Иконка телефона" class="w-5 h-5"/>
+                        </div>
+                        <p class="text-base text-gray-700 font-medium">+7 777 007 0709</p>
+                    </a>
+                    <a href="mailto:llcmultivision@gmail.com" class="flex items-center gap-4 p-4 bg-white rounded-xl hover:shadow-md transition-all duration-300">
+                        <div class="p-3 bg-gradient-to-r from-[#0052CC] to-[#4C9AFF] rounded-full flex-shrink-0">
+                            <Image src={messageIcon} alt="Иконка сообщения" class="w-5 h-5"/>
+                        </div>
+                        <p class="text-base text-gray-700 font-medium">llcmultivision@gmail.com</p>
+                    </a>
+                </div>
             </div>
-            <p class="text-base md:text-lg leading-relaxed text-gray-700 font-medium">+7 777 007 0709</p>
-        </div>
-        <div class="flex flex-row items-center gap-4 p-6 bg-gray-50 rounded-xl hover:bg-blue-50 hover:shadow-md transition-all duration-300 cursor-pointer" data-email>
-            <div class="p-5 bg-gradient-to-r from-[#0052CC] to-[#4C9AFF] rounded-full transition-transform duration-300 hover:scale-110">
-                <Image src={messageIcon} alt="Иконка сообщения"/>
-            </div>
-            <p class="text-base md:text-lg leading-relaxed text-gray-700 font-medium">llcmultivision@gmail.com</p>
         </div>
     </div>
-</div>
+</section>
 
 <script>
-    document.querySelector('[data-phone]')?.addEventListener('click', () => {
-        window.location.href = 'tel:+77770070709';
-    });
-    
-    document.querySelector('[data-email]')?.addEventListener('click', () => {
-        window.location.href = 'mailto:llcmultivision@gmail.com';
+    const form = document.getElementById('contact-form') as HTMLFormElement;
+    const successMsg = document.getElementById('form-success');
+
+    form?.addEventListener('submit', (e) => {
+        e.preventDefault();
+        
+        // Simple mailto fallback
+        const name = (form.querySelector('#name') as HTMLInputElement)?.value;
+        const email = (form.querySelector('#email') as HTMLInputElement)?.value;
+        const phone = (form.querySelector('#phone') as HTMLInputElement)?.value;
+        const message = (form.querySelector('#message') as HTMLTextAreaElement)?.value;
+        
+        const body = `Имя: ${name}%0AEmail: ${email}%0AТелефон: ${phone}%0A%0AСообщение: ${message}`;
+        window.location.href = `mailto:llcmultivision@gmail.com?subject=Заявка с сайта от ${name}&body=${body}`;
+        
+        form.classList.add('hidden');
+        successMsg?.classList.remove('hidden');
     });
 </script>

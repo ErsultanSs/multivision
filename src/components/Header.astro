@@ -3,17 +3,111 @@ import { Image } from "astro:assets";
 import logoIcon from "../assets/logo.svg";
 ---
 
-<header class="mx-auto flex flex-row justify-between items-center text-gray-900 max-w-[1340px] w-full">
-    <Image src={logoIcon} alt="Multivision Логотип"/>
+<header id="main-header" class="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm transition-all duration-300">
+    <div class="mx-auto flex flex-row justify-between items-center text-gray-900 max-w-[1340px] w-full h-[80px] lg:h-[90px] px-4 lg:px-8">
+        <a href="/">
+            <Image src={logoIcon} alt="Multivision Логотип" class="h-[50px] lg:h-[60px] w-auto"/>
+        </a>
 
-    <nav class="hidden md:flex font-medium gap-6 lg:gap-12 list-none text-sm">
-        <li class="cursor-pointer hover:text-[#0052CC] transition-colors"><a href="/#about">О нас</a></li>
-        <li class="cursor-pointer hover:text-[#0052CC] transition-colors"><a href="/#portfolio">Продукты</a></li>
-        <li class="cursor-pointer hover:text-[#0052CC] transition-colors"><a href="/solutions/ris">Решения</a></li>
-        <li class="cursor-pointer hover:text-[#0052CC] transition-colors"><a href="/courses">Курсы</a></li>
-        <li class="cursor-pointer hover:text-[#0052CC] transition-colors"><a href="/#whyus">Почему мы</a></li>
-        <li class="cursor-pointer hover:text-[#0052CC] transition-colors"><a href="/#contacts">Контакты</a></li>
-    </nav>
+        <nav class="hidden lg:flex items-center font-medium gap-6 xl:gap-10 list-none text-[15px]">
+            <li class="relative group cursor-pointer flex items-center">
+                <a href="/#about" class="py-2 hover:text-[#0052CC] transition-colors">О нас</a>
+            </li>
+            <li class="relative group cursor-pointer flex items-center">
+                <a href="/#portfolio" class="py-2 hover:text-[#0052CC] transition-colors flex items-center gap-1">
+                    Продукты
+                    <svg class="w-3.5 h-3.5 transition-transform group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                </a>
+                <div class="absolute top-full -left-4 pt-4 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+                    <div class="bg-white rounded-xl shadow-xl border border-gray-100 py-3 min-w-[220px]">
+                        <a href="/#portfolio" class="block px-5 py-2.5 text-sm text-gray-700 hover:bg-blue-50 hover:text-[#0052CC] transition-colors">ЧС Алматы</a>
+                        <a href="/#portfolio" class="block px-5 py-2.5 text-sm text-gray-700 hover:bg-blue-50 hover:text-[#0052CC] transition-colors">Quick AI</a>
+                        <a href="/#portfolio" class="block px-5 py-2.5 text-sm text-gray-700 hover:bg-blue-50 hover:text-[#0052CC] transition-colors">Azbuka 4D</a>
+                    </div>
+                </div>
+            </li>
+            <li class="relative group cursor-pointer flex items-center">
+                <a href="/solutions/ris" class="py-2 hover:text-[#0052CC] transition-colors">Решения</a>
+            </li>
+            <li class="cursor-pointer flex items-center">
+                <a href="/courses" class="py-2 hover:text-[#0052CC] transition-colors">Курсы</a>
+            </li>
+            <li class="cursor-pointer flex items-center">
+                <a href="/#whyus" class="py-2 hover:text-[#0052CC] transition-colors">Почему мы</a>
+            </li>
+            <li class="cursor-pointer flex items-center">
+                <a href="/#contacts" class="py-2 hover:text-[#0052CC] transition-colors">Контакты</a>
+            </li>
+        </nav>
 
-    <button class="uppercase px-[27px] md:px-11 py-[11px] md:py-[18px] text-[12px] bg-gradient-to-r from-[#0052CC] to-[#4C9AFF] text-white rounded-full tracking-wide leading-[12px] shadow-lg hover:shadow-xl transition-all hover:-translate-y-0.5" onclick="window.location.href='mailto:llcmultivision@gmail.com'">Подать заявку</button>
+        <div class="flex items-center gap-4">
+            <a href="mailto:llcmultivision@gmail.com" class="hidden md:inline-flex uppercase px-8 py-3 text-[12px] bg-gradient-to-r from-[#0052CC] to-[#4C9AFF] text-white rounded-md tracking-wide leading-[12px] shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-0.5 font-semibold">
+                Подать заявку
+            </a>
+            
+            <!-- Mobile hamburger -->
+            <button id="mobile-menu-btn" class="lg:hidden flex flex-col justify-center items-center w-10 h-10 gap-1.5 group" aria-label="Меню">
+                <span class="hamburger-line w-6 h-0.5 bg-gray-800 rounded-full transition-all duration-300 origin-center"></span>
+                <span class="hamburger-line w-6 h-0.5 bg-gray-800 rounded-full transition-all duration-300"></span>
+                <span class="hamburger-line w-6 h-0.5 bg-gray-800 rounded-full transition-all duration-300 origin-center"></span>
+            </button>
+        </div>
+    </div>
+
+    <!-- Mobile menu -->
+    <div id="mobile-menu" class="lg:hidden hidden bg-white border-t border-gray-100 shadow-lg">
+        <nav class="flex flex-col py-4 px-6">
+            <a href="/#about" class="py-3 text-gray-700 hover:text-[#0052CC] transition-colors font-medium border-b border-gray-100">О нас</a>
+            <a href="/#portfolio" class="py-3 text-gray-700 hover:text-[#0052CC] transition-colors font-medium border-b border-gray-100">Продукты</a>
+            <a href="/solutions/ris" class="py-3 text-gray-700 hover:text-[#0052CC] transition-colors font-medium border-b border-gray-100">Решения</a>
+            <a href="/courses" class="py-3 text-gray-700 hover:text-[#0052CC] transition-colors font-medium border-b border-gray-100">Курсы</a>
+            <a href="/#whyus" class="py-3 text-gray-700 hover:text-[#0052CC] transition-colors font-medium border-b border-gray-100">Почему мы</a>
+            <a href="/#contacts" class="py-3 text-gray-700 hover:text-[#0052CC] transition-colors font-medium">Контакты</a>
+            <a href="mailto:llcmultivision@gmail.com" class="mt-4 text-center uppercase px-8 py-3 text-[12px] bg-gradient-to-r from-[#0052CC] to-[#4C9AFF] text-white rounded-md tracking-wide leading-[12px] shadow-lg font-semibold">
+                Подать заявку
+            </a>
+        </nav>
+    </div>
 </header>
+
+<script>
+    // Mobile menu toggle
+    const menuBtn = document.getElementById('mobile-menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const hamburgerLines = document.querySelectorAll('.hamburger-line');
+    
+    menuBtn?.addEventListener('click', () => {
+        const isOpen = !mobileMenu?.classList.contains('hidden');
+        mobileMenu?.classList.toggle('hidden');
+        
+        if (!isOpen) {
+            hamburgerLines[0]?.classList.add('rotate-45', 'translate-y-[8px]');
+            hamburgerLines[1]?.classList.add('opacity-0');
+            hamburgerLines[2]?.classList.add('-rotate-45', '-translate-y-[8px]');
+        } else {
+            hamburgerLines[0]?.classList.remove('rotate-45', 'translate-y-[8px]');
+            hamburgerLines[1]?.classList.remove('opacity-0');
+            hamburgerLines[2]?.classList.remove('-rotate-45', '-translate-y-[8px]');
+        }
+    });
+
+    // Close mobile menu on link click
+    mobileMenu?.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+            mobileMenu?.classList.add('hidden');
+            hamburgerLines[0]?.classList.remove('rotate-45', 'translate-y-[8px]');
+            hamburgerLines[1]?.classList.remove('opacity-0');
+            hamburgerLines[2]?.classList.remove('-rotate-45', '-translate-y-[8px]');
+        });
+    });
+
+    // Header shadow on scroll
+    const header = document.getElementById('main-header');
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 10) {
+            header?.classList.add('shadow-md');
+        } else {
+            header?.classList.remove('shadow-md');
+        }
+    });
+</script>

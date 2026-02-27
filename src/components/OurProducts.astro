@@ -3,82 +3,84 @@ import Title from "./Title.astro";
 import Subtitle from "./Subtitle.astro";
 ---
 
-<div id="portfolio" class="max-w-[1440px] mx-auto flex flex-col gap-12 sm:gap-16 px-[10px] lg:px-12 py-[80px] lg:py-[120px] bg-white">
-    <!-- Projects Section Header -->
-    <div class="mx-auto max-w-3xl text-center">
-        <Title>Инновационные проекты, меняющие жизни</Title>
-        <Subtitle>
-            От идеи до реализации — мы создаем технологические решения для корпоративных и государственных клиентов. Каждый проект — это история успеха, воплощенная с использованием передовых AI-технологий и глубокой экспертизы нашей команды.
-        </Subtitle>
-    </div>
-    
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        <!-- ЧС Алматы -->
-        <div class="product-card group bg-white p-8 md:p-10 rounded-2xl border-2 border-gray-200 hover:border-red-500 hover:shadow-xl transition-all duration-300">
-            <div class="flex flex-col h-full justify-between gap-6">
-                <div>
-                    <div class="inline-block mb-4">
-                        <div class="rounded-lg text-sm font-medium text-red-600 px-4 py-2 bg-red-50 border border-red-200">
-                            Чрезвычайные ситуации
-                        </div>    
-                    </div>
-                    <h3 class="text-3xl md:text-4xl font-bold leading-tight mb-4 text-gray-900 group-hover:text-red-600 transition-colors">
-                        ЧС Алматы
-                    </h3>
-                    <p class="text-base md:text-lg text-gray-600 mb-6 leading-relaxed">
-                        Ваш надежный спутник безопасности в любой ситуации. Всегда готовы к непредвиденным обстоятельствам.
-                    </p>
-                </div>
-                
-                <div class="space-y-4">
-                    <div>
-                        <h4 class="text-sm font-semibold text-gray-900 mb-3 uppercase tracking-wide">Ключевые возможности</h4>
-                        <ul class="text-sm text-gray-600 leading-relaxed space-y-2">
+<section id="portfolio" class="py-16 md:py-24 bg-white">
+    <div class="max-w-[1200px] mx-auto px-6 lg:px-8">
+        <!-- Section header with CTA -->
+        <div class="products-header flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-16">
+            <div class="max-w-2xl">
+                <Title>Инновационные проекты, меняющие жизни</Title>
+                <Subtitle>
+                    От идеи до реализации — мы создаем технологические решения для корпоративных и государственных клиентов.
+                </Subtitle>
+            </div>
+            <a href="#contacts" class="inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-[#0052CC] to-[#4C9AFF] text-white font-semibold rounded-md shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-0.5 whitespace-nowrap relative">
+                <!-- Decorative dashed borders -->
+                <span class="absolute -left-2 top-2 bottom-2 border-l-2 border-dashed border-[#4C9AFF]/40"></span>
+                <span class="absolute -right-2 top-2 bottom-2 border-r-2 border-dashed border-[#4C9AFF]/40"></span>
+                Начать проект
+            </a>
+        </div>
+        
+        <!-- Stepped 3-card layout -->
+        <div class="relative bg-gray-100 rounded-2xl p-6 md:p-10 lg:p-12">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-0 items-center">
+                <!-- Left card (shorter) -->
+                <div class="product-card group bg-white rounded-2xl md:rounded-r-none shadow-lg overflow-hidden transition-all duration-300 md:my-8">
+                    <div class="p-8 md:p-8 lg:p-10 flex flex-col h-full">
+                        <div class="inline-block mb-4">
+                            <div class="rounded-lg text-sm font-medium text-red-600 px-4 py-2 bg-red-50 border border-red-200">
+                                Чрезвычайные ситуации
+                            </div>    
+                        </div>
+                        <h3 class="text-2xl md:text-3xl font-bold leading-tight mb-3 text-gray-900 group-hover:text-red-600 transition-colors">
+                            ЧС Алматы
+                        </h3>
+                        <p class="text-base text-gray-600 mb-6 leading-relaxed">
+                            Ваш надежный спутник безопасности в любой ситуации.
+                        </p>
+                        <ul class="text-sm text-gray-600 leading-relaxed space-y-2 mt-auto">
                             <li class="flex items-start gap-2">
                                 <svg class="w-5 h-5 text-red-500 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                                     <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
                                 </svg>
-                                <span>Критические уведомления с приоритетной доставкой</span>
+                                <span>Критические уведомления</span>
                             </li>
                             <li class="flex items-start gap-2">
                                 <svg class="w-5 h-5 text-red-500 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                                     <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
                                 </svg>
-                                <span>SOS-система с геолокацией в реальном времени</span>
+                                <span>SOS-система с геолокацией</span>
                             </li>
                             <li class="flex items-start gap-2">
                                 <svg class="w-5 h-5 text-red-500 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                                     <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
                                 </svg>
-                                <span>Офлайн-навигация на базе векторных карт</span>
+                                <span>Офлайн-навигация</span>
                             </li>
                         </ul>
+                        <a href="#" class="inline-flex items-center font-semibold text-red-600 hover:text-red-700 transition-colors mt-6">
+                            <span class="mr-1 text-lg">▸</span>
+                            <span>Подробнее</span>
+                        </a>
                     </div>
                 </div>
-            </div>
-        </div>
 
-        <!-- Quick AI -->
-        <div class="product-card group bg-white p-8 md:p-10 rounded-2xl border-2 border-gray-200 hover:border-blue-500 hover:shadow-xl transition-all duration-300">
-            <div class="flex flex-col h-full justify-between gap-6">
-                <div>
-                    <div class="inline-block mb-4">
-                        <div class="rounded-lg text-sm font-medium text-blue-600 px-4 py-2 bg-blue-50 border border-blue-200">
-                            Обучение
-                        </div>    
-                    </div>
-                    <h3 class="text-3xl md:text-4xl font-bold leading-tight mb-4 text-gray-900 group-hover:text-blue-600 transition-colors">
-                        Quick AI
-                    </h3>
-                    <p class="text-base md:text-lg text-gray-600 mb-6 leading-relaxed">
-                        Революционное AI-решение для эффективного обучения через видеоконтент
-                    </p>
-                </div>
-                
-                <div class="space-y-4">
-                    <div>
-                        <h4 class="text-sm font-semibold text-gray-900 mb-3 uppercase tracking-wide">Что умеет Quick AI</h4>
-                        <ul class="text-sm text-gray-600 leading-relaxed space-y-2">
+                <!-- Center card (taller, elevated) -->
+                <div class="product-card central-card group bg-white rounded-2xl shadow-2xl overflow-hidden transition-all duration-300 relative z-10 md:-my-4">
+                    <div class="h-2 bg-gradient-to-r from-[#0052CC] to-[#4C9AFF]"></div>
+                    <div class="p-8 md:p-8 lg:p-10 flex flex-col h-full">
+                        <div class="inline-block mb-4">
+                            <div class="rounded-lg text-sm font-medium text-blue-600 px-4 py-2 bg-blue-50 border border-blue-200">
+                                Обучение
+                            </div>    
+                        </div>
+                        <h3 class="text-2xl md:text-3xl font-bold leading-tight mb-3 text-gray-900 group-hover:text-blue-600 transition-colors">
+                            Quick AI
+                        </h3>
+                        <p class="text-base text-gray-600 mb-6 leading-relaxed">
+                            Революционное AI-решение для эффективного обучения через видеоконтент.
+                        </p>
+                        <ul class="text-sm text-gray-600 leading-relaxed space-y-2 mt-auto">
                             <li class="flex items-start gap-2">
                                 <svg class="w-5 h-5 text-blue-500 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                                     <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
@@ -98,32 +100,28 @@ import Subtitle from "./Subtitle.astro";
                                 <span>Персонализированные тесты</span>
                             </li>
                         </ul>
+                        <a href="#" class="inline-flex items-center font-semibold text-[#0052CC] hover:text-[#4C9AFF] transition-colors mt-6">
+                            <span class="mr-1 text-lg">▸</span>
+                            <span>Подробнее</span>
+                        </a>
                     </div>
                 </div>
-            </div>
-        </div>
 
-        <!-- Азбука безопасности -->
-        <div class="product-card group bg-white p-8 md:p-10 rounded-2xl border-2 border-gray-200 hover:border-green-600 hover:shadow-xl transition-all duration-300">
-            <div class="flex flex-col h-full justify-between gap-6">
-                <div>
-                    <div class="inline-block mb-4">
-                        <div class="rounded-lg text-sm font-medium text-green-700 px-4 py-2 bg-green-50 border border-green-200">
-                            Образование
-                        </div>    
-                    </div>
-                    <h3 class="text-3xl md:text-4xl font-bold leading-tight mb-4 text-gray-900 group-hover:text-green-600 transition-colors">
-                        Azbuka 4D
-                    </h3>
-                    <p class="text-base md:text-lg text-gray-600 mb-6 leading-relaxed">
-                        Дополненная реальность для изучения техники безопасности — безопасно и эффективно
-                    </p>
-                </div>
-                
-                <div class="space-y-4">
-                    <div>
-                        <h4 class="text-sm font-semibold text-gray-900 mb-3 uppercase tracking-wide">Уникальный опыт</h4>
-                        <ul class="text-sm text-gray-600 leading-relaxed space-y-2">
+                <!-- Right card (shorter) -->
+                <div class="product-card group bg-white rounded-2xl md:rounded-l-none shadow-lg overflow-hidden transition-all duration-300 md:my-8">
+                    <div class="p-8 md:p-8 lg:p-10 flex flex-col h-full">
+                        <div class="inline-block mb-4">
+                            <div class="rounded-lg text-sm font-medium text-green-700 px-4 py-2 bg-green-50 border border-green-200">
+                                Образование
+                            </div>    
+                        </div>
+                        <h3 class="text-2xl md:text-3xl font-bold leading-tight mb-3 text-gray-900 group-hover:text-green-600 transition-colors">
+                            Azbuka 4D
+                        </h3>
+                        <p class="text-base text-gray-600 mb-6 leading-relaxed">
+                            Дополненная реальность для изучения техники безопасности.
+                        </p>
+                        <ul class="text-sm text-gray-600 leading-relaxed space-y-2 mt-auto">
                             <li class="flex items-start gap-2">
                                 <svg class="w-5 h-5 text-green-600 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                                     <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
@@ -140,23 +138,28 @@ import Subtitle from "./Subtitle.astro";
                                 <svg class="w-5 h-5 text-green-600 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                                     <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
                                 </svg>
-                                <span>Обучение работе с опасным оборудованием</span>
+                                <span>Обучение работе с оборудованием</span>
                             </li>
                         </ul>
+                        <a href="#" class="inline-flex items-center font-semibold text-green-600 hover:text-green-700 transition-colors mt-6">
+                            <span class="mr-1 text-lg">▸</span>
+                            <span>Подробнее</span>
+                        </a>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
+</section>
 
 <style>
     .product-card {
         transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-        position: relative;
     }
-    
     .product-card:hover {
         transform: translateY(-4px);
+    }
+    .central-card:hover {
+        transform: translateY(-8px);
     }
 </style>
