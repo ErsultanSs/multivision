@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="180" height="60" viewBox="0 0 180 60">
+  <rect width="180" height="60" fill="transparent"/>
+  <rect x="4" y="10" width="36" height="40" rx="4" fill="#1B5EAB"/>
+  <text x="22" y="37" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="white" text-anchor="middle">TY</text>
+  <text x="100" y="32" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#1B5EAB" text-anchor="middle">TONGYAN</text>
+  <text x="100" y="48" font-family="Arial, sans-serif" font-size="10" fill="#555" text-anchor="middle">Technology Co., Ltd.</text>
+</svg>

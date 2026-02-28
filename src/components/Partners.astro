@@ -1,0 +1,89 @@
+---
+const partners = [
+    {
+        name: "SuperMap",
+        logo: "/partners/supermap.png",
+        url: "https://www.supermap.com",
+        bg: "bg-white"
+    },
+    {
+        name: "Feidu",
+        logo: "/partners/feidu.png",
+        url: "https://www.fei-du.com",
+        bg: "bg-white"
+    },
+    {
+        name: "Tongyan",
+        logo: "/partners/tongyan.svg",
+        url: "#",
+        bg: "bg-white"
+    },
+    {
+        name: "iSoftStone",
+        logo: "/partners/isoftstone.svg",
+        url: "https://www.isoftstone.com",
+        bg: "bg-white"
+    },
+    {
+        name: "Акимат Алматы",
+        logo: "/partners/almaty-akimat.png",
+        url: "https://www.gov.kz/memleket/entities/almaty",
+        bg: "bg-white"
+    },
+    {
+        name: "G Safety",
+        logo: "/partners/gsafety.png",
+        url: "https://www.gsafety.com",
+        bg: "bg-white"
+    }
+];
+---
+
+<section class="bg-white border-t border-b border-[var(--border)] py-14 lg:py-20 overflow-hidden">
+    <div class="max-w-[1440px] mx-auto px-6 lg:px-10 xl:px-16">
+
+        <!-- Header -->
+        <div class="text-center mb-12">
+            <div class="flex items-center justify-center gap-3 mb-4">
+                <div class="w-8 h-0.5 bg-[var(--blue)]"></div>
+                <span class="text-sm font-semibold text-[var(--blue)] uppercase tracking-widest">Партнёры</span>
+                <div class="w-8 h-0.5 bg-[var(--blue)]"></div>
+            </div>
+            <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold text-[var(--navy)]">
+                Наши партнёры
+            </h2>
+            <p class="text-[var(--text-secondary)] mt-3 max-w-lg mx-auto text-sm md:text-base">
+                Работаем с ведущими мировыми IT-компаниями и государственными организациями
+            </p>
+        </div>
+
+        <!-- Logo grid -->
+        <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4 lg:gap-6">
+            {partners.map((partner) => (
+                <a
+                    href={partner.url}
+                    target={partner.url !== '#' ? '_blank' : '_self'}
+                    rel="noopener noreferrer"
+                    class="partner-card flex items-center justify-center p-5 bg-[var(--bg-light)] rounded-2xl border border-[var(--border)] hover:border-[var(--blue)] hover:shadow-lg transition-all duration-300 group min-h-[90px]"
+                    title={partner.name}
+                >
+                    <img
+                        src={partner.logo}
+                        alt={partner.name}
+                        class="max-h-10 max-w-[130px] w-auto object-contain transition-all duration-300"
+                        loading="lazy"
+                    />
+                </a>
+            ))}
+        </div>
+    </div>
+</section>
+
+<style>
+    .partner-card {
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    .partner-card:hover {
+        transform: translateY(-4px);
+    }
+</style>
