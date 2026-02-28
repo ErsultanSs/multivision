@@ -1,27 +1,30 @@
 ---
 import Header from '../components/Header.astro';
 import Hero from "../components/Hero.astro";
+import QuickFacts from '../components/QuickFacts.astro';
+import Partners from '../components/Partners.astro';
 import AboutUs from "../components/AboutUs.astro";
 import OurProducts from '../components/OurProducts.astro';
 import EducationProgram from '../components/EducationProgram.astro';
 import Portfolio from '../components/Portfolio.astro';
 import WhyUs from "../components/WhyUs.astro";
 import Contacts from "../components/Contacts.astro";
+import Footer from '../components/Footer.astro';
 import Layout from '../layouts/Layout.astro';
 
 ---
 <Layout>
-    <div class="flex flex-col bg-gradient-to-br from-blue-50/30 via-white to-purple-50/30 min-h-[675px] px-[10px] lg:px-12 py-[22px] lg:py-[34px]">
-        <Header/>
-        <Hero/>
-    </div>
-    <EducationProgram/>
+    <Header/>
+    <Hero/>
+    <QuickFacts/>
+    <Partners/>
+    <AboutUs/>
     <OurProducts/>
+    <EducationProgram/>
     <Portfolio/>
-    <div class="relative flex flex-col bg-gradient-to-br from-gray-50 to-blue-50/30 min-h-[675px]">
-        <WhyUs/>
-        <Contacts/>
-    </div>
+    <WhyUs/>
+    <Contacts/>
+    <Footer/>
 </Layout>
 
 <script>
@@ -35,356 +38,152 @@ import Layout from '../layouts/Layout.astro';
         limitCallbacks: true,
     });
 
-    gsap.fromTo('.about-us-decor', {
-                x: -100,  
-                y: 200,   
-                rotation: -20, 
-                scale: 0.7,
-                opacity: 0
-            }, 
+    // About us cards animation
+    const aboutCards = document.querySelectorAll('.about-card');
+    aboutCards.forEach((card, index) => {
+        gsap.fromTo(card,
+            { opacity: 0, y: 60 },
             {
-                x: 0,
-                y: 0,
-                rotation: 0,
-                scale: 1,
-                opacity: 1,
-                
-                // ScrollTrigger configuration
-                scrollTrigger: {
-                    trigger: '.about-us-decor',
-                    start: 'top 80%', 
-                    end: 'bottom 60%', 
-                    once: true,        
-                    markers: false      
-                },
-                
-                // Animation configuration
-                duration: 1.5,
-                ease: 'power2.out'
+                opacity: 1, y: 0, duration: 0.8, ease: "power2.out",
+                delay: index * 0.2,
+                scrollTrigger: { trigger: card, start: "top 85%", once: true }
             }
-    );
+        );
+    });
 
-    gsap.fromTo(
-        ".hero-title > div:nth-child(1)",
-        { x: -100, opacity: 0 },
-        { x: 0, opacity: 1, duration: 1 }
-    );
-
-    gsap.fromTo(
-        ".hero-title > div:nth-child(2)",
-        { x: -100, opacity: 0 },
-        { x: 0, opacity: 1, duration: 1, delay: 0.2 }
-    );
-
-    gsap.fromTo(
-        ".hero-title > div:nth-child(3)",
-        { x: -100, opacity: 0 },
-        { x: 0, opacity: 1, duration: 1, delay: 0.4 }
-    );
-
-    gsap.fromTo(
-        ".hero-description",
-        { opacity: 0 },
-        { opacity: 1, duration: 1, delay: 1.5 }
-    );
-
-
-    gsap.fromTo("header",
+    // Quick facts animation
+    gsap.fromTo(".quick-facts",
+        { opacity: 0, y: 50 },
         {
-            y: -100, // Start from above the viewport
-            opacity: 0
-        },
-        {
-            y: 0, // Move to original position
-            opacity: 1,
-            duration: 1,
-            ease: "power3.out", // Smooth easing
-        }
-    );
-    
-    gsap.fromTo(
-        ".service-content",
-        {
-            opacity: 0,
-        },
-        {
-            opacity: 1,
-            duration: 1,
-            delay: 0.5,
-            ease: "power3.out", 
-            scrollTrigger: {
-                trigger: ".service-content",
-                start: "top 80%",
-                end: "bottom 60%",
-                once: true,
-                markers: false,
-            },
+            opacity: 1, y: 0, duration: 1, ease: "power3.out",
+            scrollTrigger: { trigger: ".quick-facts", start: "top 80%", once: true }
         }
     );
 
+    // About us content
     gsap.fromTo(".about-us-content",
-            {
-                opacity: 0
-            },
-            {
-                opacity: 1,
-                duration: 1,
-                ease: "power3.out", 
-                delay: 0.5,
-                scrollTrigger: {
-                    trigger: ".about-us-content",
-                    start: "top 80%",
-                    end: "bottom 60%",
-                    once: true,
-                    markers: false,
-                },
-            }
-    );
-
-    // Cards animation
-    const cards = document.querySelectorAll(".service-card");
-    cards.forEach((card, index) => {
-        gsap.fromTo(
-            card,
-            {
-                opacity: 0,
-                y: 100, // Start below the viewport
-            },
-            {
-                opacity: 1,
-                y: 0,
-                duration: 1,
-                ease: "power2.out",
-                delay: index * 0.2, 
-                scrollTrigger: {
-                    trigger: card,
-                    start: "top 80%", // Trigger animation when card is visible
-                    once: true, // Animation runs only once
-                },
-            }
-        );
-
-        card.addEventListener("mouseenter", () => {
-            gsap.to(card, {
-                y: -5, 
-                scale: 1.02, 
-                duration: 0.4,
-                ease: "power2.out",
-            });
-        });
-
-        card.addEventListener("mouseleave", () => {
-            gsap.to(card, {
-                y: 0,
-                scale: 1,
-                duration: 0.3,
-                ease: "power2.out",
-            });
-        });
-    });
-
-    gsap.fromTo(
-        ".why-us-title",
+        { opacity: 0, y: 30 },
         {
-            opacity: 0,
-            y: 20,
-        },
-        {
-            opacity: 1,
-            y: 0,
-            duration: 1,
-            ease: "power2.out",
-            scrollTrigger: {
-                trigger: "h3",
-                start: "top 90%",
-                once: true,
-            },
+            opacity: 1, y: 0, duration: 1, ease: "power3.out",
+            scrollTrigger: { trigger: ".about-us-content", start: "top 80%", once: true }
         }
     );
 
-    // Circle Card animations
-    const circleCards = document.querySelectorAll(".circle-card");
-    circleCards.forEach((card, index) => {
-        gsap.fromTo(
-            card,
-            {
-                opacity: 0,
-                y: 30,
-                scale: 0.95,
-            },
-            {
-                opacity: 1,
-                y: 0,
-                scale: 1,
-                duration: 0.8,
-                ease: "power2.out",
-                delay: index * 0.2, // Stagger effect
-                scrollTrigger: {
-                    trigger: card,
-                    start: "top 90%",
-                    once: true,
-                },
-            }
-        );
-    });
-
-    gsap.fromTo(
-        ".contact-section", 
-        {
-            opacity: 0,
-            y: -50
-        },
-        {
-            opacity: 1,
-            y: 0,
-            duration: 1,
-            stagger: 0.3,
-            ease: "power3.out",
-            scrollTrigger: {
-                trigger: ".contact-section",
-                start: "top 80%",
-                end: "bottom 60%",
-                once: true,
-                markers: false,
-            },
-        }
-    );
-
-    // Products section animations
+    // Products header
     gsap.fromTo(".products-header",
+        { opacity: 0, y: 50 },
         {
-            opacity: 0,
-            y: 50
-        },
-        {
-            opacity: 1,
-            y: 0,
-            duration: 1,
-            ease: "power3.out", 
-            scrollTrigger: {
-                trigger: ".products-header",
-                start: "top 80%",
-                once: true,
-                markers: false,
-            },
+            opacity: 1, y: 0, duration: 1, ease: "power3.out",
+            scrollTrigger: { trigger: ".products-header", start: "top 80%", once: true }
         }
     );
 
     // Product cards animation
     const productCards = document.querySelectorAll(".product-card");
     productCards.forEach((card, index) => {
-        gsap.fromTo(
-            card,
+        gsap.fromTo(card,
+            { opacity: 0, y: 60, scale: 0.95 },
             {
-                opacity: 0,
-                y: 60,
-                scale: 0.95
-            },
-            {
-                opacity: 1,
-                y: 0,
-                scale: 1,
-                duration: 0.7,
-                ease: "power2.out",
+                opacity: 1, y: 0, scale: 1, duration: 0.7, ease: "power2.out",
                 delay: index * 0.15,
-                scrollTrigger: {
-                    trigger: card,
-                    start: "top 85%",
-                    once: true,
-                },
+                scrollTrigger: { trigger: card, start: "top 85%", once: true }
             }
         );
     });
 
     // Education section animations
     gsap.fromTo(".education-content",
+        { opacity: 0, y: 50 },
         {
-            opacity: 0,
-            y: 50
-        },
-        {
-            opacity: 1,
-            y: 0,
-            duration: 1,
-            ease: "power3.out", 
-            scrollTrigger: {
-                trigger: ".education-content",
-                start: "top 80%",
-                once: true,
-                markers: false,
-            },
+            opacity: 1, y: 0, duration: 1, ease: "power3.out",
+            scrollTrigger: { trigger: ".education-content", start: "top 80%", once: true }
         }
     );
 
-    // Education cards animation
     const educationCards = document.querySelectorAll(".education-card");
     educationCards.forEach((card, index) => {
-        gsap.fromTo(
-            card,
+        gsap.fromTo(card,
+            { opacity: 0, y: 80, scale: 0.95 },
             {
-                opacity: 0,
-                y: 80,
-                scale: 0.95
-            },
-            {
-                opacity: 1,
-                y: 0,
-                scale: 1,
-                duration: 0.8,
-                ease: "power2.out",
+                opacity: 1, y: 0, scale: 1, duration: 0.8, ease: "power2.out",
                 delay: index * 0.2,
-                scrollTrigger: {
-                    trigger: card,
-                    start: "top 85%",
-                    once: true,
-                },
+                scrollTrigger: { trigger: card, start: "top 85%", once: true }
             }
         );
     });
 
-    // Stat cards animation with stagger
+    // Stat cards
     const statCards = document.querySelectorAll(".stat-card");
     statCards.forEach((card, index) => {
-        gsap.fromTo(
-            card,
+        gsap.fromTo(card,
+            { opacity: 0, y: 30, scale: 0.9 },
             {
-                opacity: 0,
-                y: 30,
-                scale: 0.9
-            },
-            {
-                opacity: 1,
-                y: 0,
-                scale: 1,
-                duration: 0.6,
-                ease: "back.out(1.2)",
+                opacity: 1, y: 0, scale: 1, duration: 0.6, ease: "back.out(1.2)",
                 delay: index * 0.1,
-                scrollTrigger: {
-                    trigger: card,
-                    start: "top 90%",
-                    once: true,
-                },
+                scrollTrigger: { trigger: card, start: "top 90%", once: true }
             }
         );
     });
 
-    // Education result animation
+    // Education result
     gsap.fromTo(".education-result",
+        { opacity: 0, y: 50 },
         {
-            opacity: 0,
-            y: 50
-        },
-        {
-            opacity: 1,
-            y: 0,
-            duration: 1,
-            ease: "power3.out", 
-            scrollTrigger: {
-                trigger: ".education-result",
-                start: "top 80%",
-                once: true,
-                markers: false,
-            },
+            opacity: 1, y: 0, duration: 1, ease: "power3.out",
+            scrollTrigger: { trigger: ".education-result", start: "top 80%", once: true }
         }
     );
+
+    // Case study slider
+    gsap.fromTo(".case-study-slider",
+        { opacity: 0, y: 40 },
+        {
+            opacity: 1, y: 0, duration: 1, ease: "power2.out",
+            scrollTrigger: { trigger: ".case-study-slider", start: "top 80%", once: true }
+        }
+    );
+
+    // Why Us title
+    gsap.fromTo(".why-us-title",
+        { opacity: 0, y: 30 },
+        {
+            opacity: 1, y: 0, duration: 1, ease: "power2.out",
+            scrollTrigger: { trigger: ".why-us-title", start: "top 85%", once: true }
+        }
+    );
+
+    // Industry cards animation
+    const industryCards = document.querySelectorAll(".industry-card");
+    industryCards.forEach((card, index) => {
+        gsap.fromTo(card,
+            { opacity: 0, y: 40, scale: 0.95 },
+            {
+                opacity: 1, y: 0, scale: 1, duration: 0.6, ease: "power2.out",
+                delay: index * 0.1,
+                scrollTrigger: { trigger: card, start: "top 85%", once: true }
+            }
+        );
+    });
+
+    // Contact section
+    gsap.fromTo(".contact-section",
+        { opacity: 0, y: 50 },
+        {
+            opacity: 1, y: 0, duration: 1, ease: "power3.out",
+            scrollTrigger: { trigger: ".contact-section", start: "top 80%", once: true }
+        }
+    );
+
+    // Fact items stagger
+    const factItems = document.querySelectorAll(".fact-item");
+    factItems.forEach((item, index) => {
+        gsap.fromTo(item,
+            { opacity: 0, x: 30 },
+            {
+                opacity: 1, x: 0, duration: 0.6, ease: "power2.out",
+                delay: index * 0.2,
+                scrollTrigger: { trigger: item, start: "top 90%", once: true }
+            }
+        );
+    });
 </script>

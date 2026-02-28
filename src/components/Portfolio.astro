@@ -1,102 +1,157 @@
 ---
-import { Image } from "astro:assets";
 import Title from "./Title.astro";
 import Subtitle from "./Subtitle.astro";
-import Table from "./Table.astro";
-import porfolio1 from "../assets/portfolio-1.png";
-import porfolio2 from "../assets/portfolio-2.png";
 ---
-<div class="max-w-[1440px] mx-auto flex flex-col gap-8 sm:gap-16 px-[10px] lg:px-12 py-[56px] lg:py-[34px]">
-    
+
+<section id="case-studies" class="py-16 md:py-24 bg-gray-50">
+    <div class="max-w-[1200px] mx-auto px-6 lg:px-8">
+        <!-- Section title -->
+        <div class="text-center mb-12 md:mb-16">
+            <Title>Кейсы наших проектов</Title>
+        </div>
+
+        <!-- Case study slider card -->
+        <div class="case-study-slider bg-white rounded-2xl shadow-xl overflow-hidden" style="min-height: 420px;">
+            <div class="flex flex-col md:flex-row h-full">
+                <!-- Text side (56%) -->
+                <div class="flex-1 md:w-[56%] p-8 md:p-12 lg:p-16 flex flex-col justify-center relative">
+                    <!-- Case 1 -->
+                    <div class="case-text-slide transition-all duration-500" data-case="0">
+                        <h3 class="text-2xl md:text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
+                            ЧС Алматы
+                        </h3>
+                        <p class="text-base md:text-lg text-gray-600 leading-relaxed mb-8">
+                            Мобильное приложение для оповещения жителей города о чрезвычайных ситуациях. 
+                            Реализована SOS-система с геолокацией в реальном времени, критические уведомления 
+                            с приоритетной доставкой и офлайн-навигация.
+                        </p>
+                        <div class="flex flex-col sm:flex-row gap-4">
+                            <a href="#portfolio" class="inline-flex items-center font-semibold text-[#0052CC] hover:text-[#4C9AFF] transition-colors">
+                                <span class="mr-1 text-lg">▸</span>
+                                <span>Подробнее о проекте</span>
+                            </a>
+                            <a href="#portfolio" class="inline-flex items-center font-semibold text-gray-500 hover:text-gray-700 transition-colors">
+                                <span>Все проекты →</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Case 2 -->
+                    <div class="case-text-slide hidden transition-all duration-500" data-case="1">
+                        <h3 class="text-2xl md:text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
+                            Quick AI
+                        </h3>
+                        <p class="text-base md:text-lg text-gray-600 leading-relaxed mb-8">
+                            AI-платформа для эффективного обучения через видеоконтент. Система обрабатывает 
+                            видео любой продолжительности, генерирует структурированные конспекты и 
+                            создает персонализированные тесты для каждого студента.
+                        </p>
+                        <div class="flex flex-col sm:flex-row gap-4">
+                            <a href="#portfolio" class="inline-flex items-center font-semibold text-[#0052CC] hover:text-[#4C9AFF] transition-colors">
+                                <span class="mr-1 text-lg">▸</span>
+                                <span>Подробнее о проекте</span>
+                            </a>
+                            <a href="#portfolio" class="inline-flex items-center font-semibold text-gray-500 hover:text-gray-700 transition-colors">
+                                <span>Все проекты →</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Case 3 -->
+                    <div class="case-text-slide hidden transition-all duration-500" data-case="2">
+                        <h3 class="text-2xl md:text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
+                            РИС — Редакционно-издательская система
+                        </h3>
+                        <p class="text-base md:text-lg text-gray-600 leading-relaxed mb-8">
+                            Комплексная система для управления издательским процессом. Интеграция с Adobe InDesign, 
+                            автоматизация верстки, управление контентом и workflow для редакций.
+                        </p>
+                        <div class="flex flex-col sm:flex-row gap-4">
+                            <a href="/solutions/ris" class="inline-flex items-center font-semibold text-[#0052CC] hover:text-[#4C9AFF] transition-colors">
+                                <span class="mr-1 text-lg">▸</span>
+                                <span>Подробнее о проекте</span>
+                            </a>
+                            <a href="#portfolio" class="inline-flex items-center font-semibold text-gray-500 hover:text-gray-700 transition-colors">
+                                <span>Все проекты →</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Dots navigation -->
+                    <div class="flex gap-3 mt-8">
+                        <button class="case-dot w-10 h-1.5 rounded-full bg-[#0052CC] transition-all duration-300" data-case-dot="0"></button>
+                        <button class="case-dot w-10 h-1.5 rounded-full bg-gray-300 transition-all duration-300" data-case-dot="1"></button>
+                        <button class="case-dot w-10 h-1.5 rounded-full bg-gray-300 transition-all duration-300" data-case-dot="2"></button>
+                    </div>
+                </div>
+
+                <!-- Image side (44%) -->
+                <div class="md:w-[44%] relative overflow-hidden min-h-[300px] md:min-h-0">
+                    <div class="case-image-slide absolute inset-0 transition-opacity duration-500 opacity-100" data-case-img="0">
+                        <img 
+                            src="/projects/chs-almaty.png" 
+                            alt="ЧС Алматы" 
+                            class="w-full h-full object-cover"
+                        />
+                    </div>
+                    <div class="case-image-slide absolute inset-0 transition-opacity duration-500 opacity-0" data-case-img="1">
+                        <img 
+                            src="/projects/quick.png" 
+                            alt="Quick AI" 
+                            class="w-full h-full object-cover"
+                        />
+                    </div>
+                    <div class="case-image-slide absolute inset-0 transition-opacity duration-500 opacity-0" data-case-img="2">
+                        <div class="w-full h-full bg-gradient-to-br from-[#0052CC] to-[#5243AA] flex items-center justify-center">
+                            <span class="text-white/20 text-[80px] md:text-[100px] font-bold">РИС</span>
+                        </div>
+                    </div>
+
+                    <!-- Arrow buttons -->
+                    <div class="absolute bottom-4 right-4 flex gap-2 z-10">
+                        <button class="case-prev w-10 h-10 rounded-full bg-white/90 hover:bg-white shadow-md flex items-center justify-center transition-all">
+                            <svg class="w-5 h-5 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/></svg>
+                        </button>
+                        <button class="case-next w-10 h-10 rounded-full bg-white/90 hover:bg-white shadow-md flex items-center justify-center transition-all">
+                            <svg class="w-5 h-5 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </section>
 
 <script>
-    import { gsap } from 'gsap';
-    import { ScrollTrigger } from "gsap/ScrollTrigger";
-    gsap.registerPlugin(ScrollTrigger);
+    const textSlides = document.querySelectorAll('.case-text-slide');
+    const imageSlides = document.querySelectorAll('.case-image-slide');
+    const caseDots = document.querySelectorAll('.case-dot');
+    const prevBtn = document.querySelector('.case-prev');
+    const nextBtn = document.querySelector('.case-next');
+    let currentCase = 0;
+    const totalCases = textSlides.length;
 
-    const toggleTable1 = document.getElementById('toggleTable1');
-    const toggleTable2 = document.getElementById('toggleTable2');
-    const tableContent1 = document.getElementById('tableContent1');
-    const tableContent2 = document.getElementById('tableContent2');
-    const arrowIcon1 = toggleTable1?.querySelector('svg');
+    function goToCase(index: number) {
+        // Hide current
+        textSlides[currentCase]?.classList.add('hidden');
+        imageSlides[currentCase]?.classList.remove('opacity-100');
+        imageSlides[currentCase]?.classList.add('opacity-0');
+        caseDots[currentCase]?.classList.remove('bg-[#0052CC]');
+        caseDots[currentCase]?.classList.add('bg-gray-300');
 
-        const productItems = document.querySelectorAll('.portfolio-item');
-        
-        productItems.forEach((item, index) => {
-            gsap.fromTo(item, 
-                {
-                    opacity: 0,
-                    y: 50,
-                    scale: 0.9 
-                },
-                {
-                    opacity: 1,
-                    y: 0, 
-                    scale: 1,
-                    duration: 0.5,
-                    ease: 'power2.out',
-                    scrollTrigger: {
-                        trigger: item,
-                        start: 'top 80%', // When top of element hits 80% of viewport
-                        once: true, // Animation runs only once
-                    }
-                }
-            );
-        });
+        currentCase = (index + totalCases) % totalCases;
 
-    function setupTableToggle(toggleButton: HTMLElement | null, tableContent: HTMLElement | null, arrowIcon: SVGSVGElement | null | undefined) {
-        if (!toggleButton || !tableContent || !arrowIcon) return;
-
-        // Initially hide the table
-        gsap.set(tableContent, { 
-            height: 0, 
-            opacity: 0, 
-            overflow: 'hidden' 
-        });
-
-        toggleButton.addEventListener('click', () => {
-            const isHidden = tableContent.classList.contains('h-0');
-
-            // Toggle rotate animation for arrow
-            gsap.to(arrowIcon, {
-                rotation: isHidden ? 180 : 0,
-                duration: 0.1,
-                ease: 'power2.inOut'
-            });
-
-            // Animate table height and opacity
-            if (isHidden) {
-                gsap.to(tableContent, {
-                    height: 'auto',
-                    opacity: 1,
-                    duration: 0.2,
-                    ease: 'power2.out',
-                    onComplete: () => {
-                        tableContent.classList.remove('h-0');
-                    }
-                });
-            } else {
-                gsap.to(tableContent, {
-                    height: 0,
-                    opacity: 0,
-                    duration: 0.2,
-                    ease: 'power2.in',
-                    onComplete: () => {
-                        tableContent.classList.add('h-0');
-                    }
-                });
-            }
-        });
+        // Show next
+        textSlides[currentCase]?.classList.remove('hidden');
+        imageSlides[currentCase]?.classList.remove('opacity-0');
+        imageSlides[currentCase]?.classList.add('opacity-100');
+        caseDots[currentCase]?.classList.remove('bg-gray-300');
+        caseDots[currentCase]?.classList.add('bg-[#0052CC]');
     }
 
-    // Setup for first table
-    setupTableToggle(toggleTable1, tableContent1, arrowIcon1);
-
-    // Setup for second table
-    setupTableToggle(
-        toggleTable2, 
-        tableContent2, 
-        toggleTable2?.querySelector('svg')
-    );
+    prevBtn?.addEventListener('click', () => goToCase(currentCase - 1));
+    nextBtn?.addEventListener('click', () => goToCase(currentCase + 1));
+    caseDots.forEach((dot, i) => {
+        dot.addEventListener('click', () => goToCase(i));
+    });
 </script>
