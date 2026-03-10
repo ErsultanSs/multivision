@@ -213,6 +213,20 @@ const certificates: Record<string, any> = {
     verified: true,
     period: "19.12.2025-19.02.2026",
     deadline: "19.02.2029"
+  },
+  "CERT-2026-593": {
+    id: "CERT-2026-593",
+    studentName: "БАБИЧ ВАСИЛИЙ СЕРГЕЕВИЧ",
+    courseName: "3Par Secure Service Training",
+    completionDate: "19.02.2026",
+    issueDate: "19.02.2026",
+    duration: "2 месяца",
+    grade: "Отлично",
+    instructor: "—",
+    skills: ["3Par Secure Service", "Storage Systems", "System Administration", "Data Security", "IT Infrastructure", "HPE 3PAR"],
+    verified: true,
+    period: "19.12.2025-19.02.2026",
+    deadline: "19.02.2029"
   }
 };
 
@@ -235,7 +249,8 @@ export async function getStaticPaths() {
     { params: { id: "CERT-2023-589" } },
     { params: { id: "CERT-2025-590" } },
     { params: { id: "CERT-2024-591" } },
-    { params: { id: "CERT-2026-592" } }
+    { params: { id: "CERT-2026-592" } },
+    { params: { id: "CERT-2026-593" } }
   ];
 }
 
