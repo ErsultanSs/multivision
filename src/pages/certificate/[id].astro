@@ -227,6 +227,62 @@ const certificates: Record<string, any> = {
     verified: true,
     period: "19.12.2025-19.02.2026",
     deadline: "19.02.2029"
+  },
+  "CERT-2026-594": {
+    id: "CERT-2026-594",
+    studentName: "Баймуканова Элеонора Исмадияровна",
+    courseName: "Работа с программным обеспечением для статистической обработки данных «SocioStat»",
+    completionDate: "10.03.2026",
+    issueDate: "10.03.2026",
+    duration: "36 часов",
+    grade: "Отлично",
+    instructor: "—",
+    skills: ["SocioStat", "Статистический анализ", "Обработка данных", "Исследования", "Аналитика данных"],
+    verified: true,
+    period: "05.03.2026-10.03.2026",
+    deadline: "10.03.2026"
+  },
+  "CERT-2026-595": {
+    id: "CERT-2026-595",
+    studentName: "Абдыкаримов Байкен Тлеулиевич",
+    courseName: "Работа с программным обеспечением для проведения социологических исследований методом дистанционного опроса «OmniConnect Survey»",
+    completionDate: "06.03.2026",
+    issueDate: "06.03.2026",
+    duration: "18 часов",
+    grade: "Отлично",
+    instructor: "—",
+    skills: ["OmniConnect Survey", "Дистанционный опрос", "Социологические исследования", "Сбор данных", "CAWI"],
+    verified: true,
+    period: "04.03.2026-06.03.2026",
+    deadline: "06.03.2026"
+  },
+  "CERT-2026-596": {
+    id: "CERT-2026-596",
+    studentName: "Ибраев Ергали Канатович",
+    courseName: "Работа с программным обеспечением для проведения социологических исследований «SurveyField»",
+    completionDate: "06.03.2026",
+    issueDate: "06.03.2026",
+    duration: "18 часов",
+    grade: "Отлично",
+    instructor: "—",
+    skills: ["SurveyField", "Социологические исследования", "Полевые исследования", "CAPI", "Сбор данных"],
+    verified: true,
+    period: "04.03.2026-06.03.2026",
+    deadline: "06.03.2026"
+  },
+  "CERT-2026-597": {
+    id: "CERT-2026-597",
+    studentName: "Джумабаева Меруэрт Мейрамбековна",
+    courseName: "Работа с программным обеспечением для проведения качественных и количественных исследований с использования метода мониторинга «QualiStat Insight»",
+    completionDate: "06.03.2026",
+    issueDate: "06.03.2026",
+    duration: "18 часов",
+    grade: "Отлично",
+    instructor: "—",
+    skills: ["QualiStat Insight", "Мониторинг", "Качественные исследования", "Количественные исследования", "Анализ данных"],
+    verified: true,
+    period: "04.03.2026-06.03.2026",
+    deadline: "06.03.2026"
   }
 };
 
@@ -250,7 +306,11 @@ export async function getStaticPaths() {
     { params: { id: "CERT-2025-590" } },
     { params: { id: "CERT-2024-591" } },
     { params: { id: "CERT-2026-592" } },
-    { params: { id: "CERT-2026-593" } }
+    { params: { id: "CERT-2026-593" } },
+    { params: { id: "CERT-2026-594" } },
+    { params: { id: "CERT-2026-595" } },
+    { params: { id: "CERT-2026-596" } },
+    { params: { id: "CERT-2026-597" } }
   ];
 }
 
