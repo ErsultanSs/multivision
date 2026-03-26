@@ -497,6 +497,27 @@ const certificates: Record<string, any> = {
     verified: true,
     period: "26.02.2026-26.03.2026",
     deadline: "26.03.2029"
+  },
+  "CERT-2026-638": {
+    id: "CERT-2026-638",
+    studentName: "Қарабаев Бақытжан Асылбекұлы",
+    courseName: "Управление информационной безопасностью по ISO/IEC 27001:2022",
+    completionDate: "25.03.2026",
+    issueDate: "25.03.2026",
+    duration: "40 часов",
+    grade: "Отлично",
+    instructor: "—",
+    skills: [
+      "ISO/IEC 27001:2022",
+      "Information Security Management System",
+      "Risk Assessment",
+      "Security Auditing",
+      "Compliance",
+      "Data Protection"
+    ],
+    verified: true,
+    period: "25.02.2026-25.03.2026",
+    deadline: "25.03.2029"
   }
 };
 
@@ -536,7 +557,8 @@ export async function getStaticPaths() {
     { params: { id: "CERT-2026-603" } },
     { params: { id: "CERT-2026-604" } },
     { params: { id: "CERT-2026-621" } },
-    { params: { id: "CERT-2026-637" } }
+    { params: { id: "CERT-2026-637" } },
+    { params: { id: "CERT-2026-638" } }
   ];
 }
 
