@@ -339,6 +339,35 @@ const certificates: Record<string, any> = {
     verified: true,
     period: "09.03.2026-16.03.2026",
     deadline: "16.03.2029"
+  },
+  "CERT-2025-602": {
+    id: "CERT-2025-602",
+    studentName: "Даулетбек Ергали Турсынгалиулы",
+    courseName: "Знания объектно-ориентировочных языков программирования",
+    description: "Обучение работы со всеми видами объектно-ориентированными языками программирования: 1. Классические (Java, C++, C#, Python); 2. Языки для веб-разработки (JavaScript, TypeScript, PHP); 3. Языки для мобильной разработки (Kotlin, Swift); 4. Другие ООП-языки (Ruby, Dart, Objective-C, Scala).",
+    completionDate: "13.08.2025",
+    issueDate: "13.08.2025",
+    duration: "2 месяца",
+    grade: "Хорошо",
+    instructor: "—",
+    skills: [
+      "Java",
+      "C++",
+      "C#",
+      "Python",
+      "JavaScript",
+      "TypeScript",
+      "PHP",
+      "Kotlin",
+      "Swift",
+      "Ruby",
+      "Dart",
+      "Objective-C",
+      "Scala"
+    ],
+    verified: true,
+    period: "14.06.2025-13.08.2025",
+    deadline: "13.08.2027"
   }
 };
 
@@ -370,7 +399,8 @@ export async function getStaticPaths() {
     { params: { id: "CERT-2025-598" } },
     { params: { id: "CERT-2026-599" } },
     { params: { id: "CERT-2026-600" } },
-    { params: { id: "CERT-2026-601" } }
+    { params: { id: "CERT-2026-601" } },
+    { params: { id: "CERT-2025-602" } }
   ];
 }
 
@@ -445,6 +475,12 @@ console.log('Certificate found:', certificate ? certificate.studentName : 'null'
                       <span class="text-gray-600 font-medium">Название курса:</span>
                       <p class="text-gray-900 font-bold mt-1">{certificate.courseName}</p>
                     </div>
+                    {certificate.description && (
+                      <div>
+                        <span class="text-gray-600 font-medium">Описание:</span>
+                        <p class="text-gray-900 mt-1 leading-relaxed">{certificate.description}</p>
+                      </div>
+                    )}
                     <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
                       <div>
                         <span class="text-gray-600 font-medium">Продолжительность:</span>
