@@ -368,6 +368,35 @@ const certificates: Record<string, any> = {
     verified: true,
     period: "14.06.2025-13.08.2025",
     deadline: "13.08.2027"
+  },
+  "CERT-2025-603": {
+    id: "CERT-2025-603",
+    studentName: "Лаубай Алдияр Айдарұлы",
+    courseName: "Знания объектно-ориентировочных языков программирования",
+    description: "Успешное освоение и применение на практике всех видов объектно-ориентированных языков программирования: 1. Классические (Java, C++, C#, Python); 2. Языки для веб-разработки (JavaScript, TypeScript, PHP); 3. Языки для мобильной разработки (Kotlin, Swift); 4. Другие ООП-языки (Ruby, Dart, Objective-C, Scala).",
+    completionDate: "13.08.2025",
+    issueDate: "13.08.2025",
+    duration: "2 месяца",
+    grade: "Отлично",
+    instructor: "—",
+    skills: [
+      "Java",
+      "C++",
+      "C#",
+      "Python",
+      "JavaScript",
+      "TypeScript",
+      "PHP",
+      "Kotlin",
+      "Swift",
+      "Ruby",
+      "Dart",
+      "Objective-C",
+      "Scala"
+    ],
+    verified: true,
+    period: "14.06.2025-13.08.2025",
+    deadline: "13.08.2027"
   }
 };
 
@@ -400,7 +429,8 @@ export async function getStaticPaths() {
     { params: { id: "CERT-2026-599" } },
     { params: { id: "CERT-2026-600" } },
     { params: { id: "CERT-2026-601" } },
-    { params: { id: "CERT-2025-602" } }
+    { params: { id: "CERT-2025-602" } },
+    { params: { id: "CERT-2025-603" } }
   ];
 }
 
