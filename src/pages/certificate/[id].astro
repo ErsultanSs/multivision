@@ -455,6 +455,27 @@ const certificates: Record<string, any> = {
     verified: true,
     period: "14.06.2025-13.08.2025",
     deadline: "13.08.2027"
+  },
+  "CERT-2026-603": {
+    id: "CERT-2026-603",
+    studentName: "Асубаев Нуржигит Калдыбекулы",
+    courseName: "Базы данных и SQL",
+    completionDate: "26.03.2026",
+    issueDate: "26.03.2026",
+    duration: "40 часов",
+    grade: "Отлично",
+    instructor: "—",
+    skills: [
+      "SQL",
+      "PostgreSQL",
+      "Проектирование баз данных",
+      "Написание запросов",
+      "Оптимизация баз данных",
+      "DML/DDL"
+    ],
+    verified: true,
+    period: "26.02.2026-26.03.2026",
+    deadline: "26.03.2029"
   }
 };
 
@@ -490,7 +511,8 @@ export async function getStaticPaths() {
     { params: { id: "CERT-2025-602" } },
     { params: { id: "CERT-2025-603" } },
     { params: { id: "CERT-2025-604" } },
-    { params: { id: "CERT-2025-605" } }
+    { params: { id: "CERT-2025-605" } },
+    { params: { id: "CERT-2026-603" } }
   ];
 }
 
