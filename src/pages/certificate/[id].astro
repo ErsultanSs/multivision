@@ -544,7 +544,17 @@ const certificates: Record<string, any> = {
     id: "TASC-T-2024062800",
     studentName: "Қарабаев Бақытжан Асылбекұлы",
     courseName: "ISO/IEC 27001:2022 Requirements for Information security management systems Lead Auditor",
-    description: "The training program of the course includes: Internationally harmonised Terminology and Principles related to Audit, Audit Team and Audit Programme Audit Criteria of ISO/IEC 27001:2022 with Requirements for Information Security Management System Audit Process according to ISO 19011:2018 with Guidelines for auditing management systems Formulation and Categorisation of Findings; Drafting Audit Report; Input for Management Review Audit Follow up actions including Corrective and Preventive actions; Contribution to Continuous Improvement Ethics, Culture and Behaviour of effective auditor, expert, auditees and management",
+    description: `Программа обучения курса включает:
+
+Международно согласованная терминология и принципы, относящиеся к аудиту, аудиторской группе и аудиторской программе 
+1. Критерии аудита ISO/IEC 27001:2022 с требованиями к системе управления информационной безопасностью 
+2. Процесс аудита в соответствии с ISO 19011:2018 с руководящими принципами для аудита систем менеджмента 
+3. Формулирование и классификация выводов; составление аудиторского отчета; вклад в анализ результатов деятельности руководством 
+4. Действия по результатам аудита, включая корректирующие и предупреждающие меры; вклад в постоянное совершенствование 
+5. Этика, культура и поведение эффективного аудитора, эксперта, аудируемых лиц и руководства
+6. Анализ эффективности внедренных контролей информационной безопаснти 
+7. Управление трудными ситуациями при аудите
+8. Документирование и хранение аудиторских доказательств`,
     completionDate: "27.07.2025",
     issueDate: "27.07.2025",
     duration: "40 часов",
@@ -680,7 +690,7 @@ console.log('Certificate found:', certificate ? certificate.studentName : 'null'
                     {certificate.description && (
                       <div>
                         <span class="text-gray-600 font-medium">Описание:</span>
-                        <p class="text-gray-900 mt-1 leading-relaxed">{certificate.description}</p>
+                        <p class="text-gray-900 mt-1 leading-relaxed whitespace-pre-line">{certificate.description}</p>
                       </div>
                     )}
                     <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
