@@ -614,7 +614,7 @@ export async function getStaticPaths() {
     { params: { id: "CERT-2026-637" } },
     { params: { id: "CERT-2026-638" } },
     { params: { id: "CERT-2026-639" } },
-    { params: { id: "TASC-T-2024062800" } }
+    { params: { id: "TASC-T-20250727-9-LA" } }
   ];
 }
 
@@ -705,10 +705,32 @@ console.log('Certificate found:', certificate ? certificate.studentName : 'null'
                         <p class="text-green-600 font-bold">{certificate.grade}</p>
                       </div>
                     </div>
-                    <div>
-                      <span class="text-gray-600 font-medium">Преподаватель:</span>
-                      <p class="text-gray-900 font-bold mt-1">{certificate.instructor}</p>
-                    </div>
+                    {certificate.instructor && !certificate.instructors && (
+                      <div>
+                        <span class="text-gray-600 font-medium">Преподаватель:</span>
+                        <p class="text-gray-900 font-bold mt-1">{certificate.instructor}</p>
+                      </div>
+                    )}
+                    {certificate.instructors && (
+                      <div>
+                        <span class="text-gray-600 font-medium">Преподаватели:</span>
+                        <div class="text-gray-900 font-bold mt-1 space-y-1">
+                          {certificate.instructors.map((inst: string) => (
+                            <p>{inst}</p>
+                          ))}
+                        </div>
+                      </div>
+                    )}
+                    {certificate.committee && (
+                      <div class="pt-2">
+                        <span class="text-gray-600 font-medium">Состав экзаменационной комиссии:</span>
+                        <div class="text-gray-900 font-bold mt-1 space-y-1">
+                          {certificate.committee.map((member: string) => (
+                            <p>{member}</p>
+                          ))}
+                        </div>
+                      </div>
+                    )}
                   </div>
                 </div>
 
