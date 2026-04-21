@@ -369,6 +369,35 @@ const certificates: Record<string, any> = {
     period: "14.06.2025-13.08.2025",
     deadline: "13.08.2027"
   },
+  "CERT-2026-397": {
+    id: "CERT-2026-397",
+    studentName: "Лаубай Алдияр Айдарұлы",
+    courseName: "Знания объектно-ориентировочных языков программирования",
+    description: "Обучение работы со всеми видами объектно-ориентированными языками программирования: 1. Классические (Java, C++, C#, Python); 2. Языки для веб-разработки (JavaScript, TypeScript, PHP); 3. Языки для мобильной разработки (Kotlin, Swift); 4. Другие ООП-языки (Ruby, Dart, Objective-C, Scala).",
+    completionDate: "20.04.2026",
+    issueDate: "20.04.2026",
+    duration: "2 месяца",
+    grade: "Хорошо",
+    instructor: "Senior Software Engineer Ахметов Р.Б.",
+    skills: [
+      "Java",
+      "C++",
+      "C#",
+      "Python",
+      "JavaScript",
+      "TypeScript",
+      "PHP",
+      "Kotlin",
+      "Swift",
+      "Ruby",
+      "Dart",
+      "Objective-C",
+      "Scala"
+    ],
+    verified: true,
+    period: "20.02.2026-20.04.2026",
+    deadline: "20.04.2028"
+  },
   "CERT-2025-603": {
     id: "CERT-2025-603",
     studentName: "Есембаев Алдияр Есембаевич",
@@ -627,7 +656,8 @@ export async function getStaticPaths() {
     { params: { id: "CERT-2026-637" } },
     { params: { id: "CERT-2026-638" } },
     { params: { id: "CERT-2026-639" } },
-    { params: { id: "TASC-T-20250727-9-LA" } }
+    { params: { id: "TASC-T-20250727-9-LA" } },
+    { params: { id: "CERT-2026-397" } }
   ];
 }
 
