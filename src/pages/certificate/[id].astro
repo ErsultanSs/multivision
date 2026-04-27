@@ -706,6 +706,30 @@ const certificates: Record<string, any> = {
     instructor: "Назаров Д.С.",
     skills: ["Unity", "C#", "Разработка компьютерных игр", "Игровая физика", "Скриптинг", "Game Design"],
     verified: true
+  },
+  "CERT-2026-21645245321245": {
+    id: "CERT-2026-21645245321245",
+    studentName: "Лобюоды",
+    courseName: "3D-дизайн при разработке компьютерных игр информационных технологий",
+    description: `Курс включает в себя:
+• Введение в 3D-графику и основы геймдева
+• Основы 3D-моделирования в Blender / Autodesk Maya
+• Продвинутое моделирование (hard surface и organic)
+• Текстурирование и материалы (PBR, UV, Substance Painter)
+• Освещение и рендеринг
+• Анимация и базовый риггинг
+• Импорт и оптимизация в Unity / Unreal Engine
+• Оптимизация 3D-моделей для игровых движков (LOD, полигонаж, текстуры)
+• Основы level design (создание игровых сцен и окружения)
+• Основы скульптинга в ZBrush
+• Итоговый проект (создание и интеграция 3D-ассета в Unity или Unreal Engine)`,
+    completionDate: "24.04.2026",
+    issueDate: "24.04.2026",
+    duration: "120 часов",
+    grade: "Отлично",
+    instructor: "Назаров Д.С.",
+    skills: ["3D-дизайн", "Разработка компьютерных игр", "3D-моделирование", "Текстурирование", "Анимация", "Игровые движки"],
+    verified: true
   }
 };
 
@@ -753,7 +777,8 @@ export async function getStaticPaths() {
     { params: { id: "CERT-2026-602" } },
     { params: { id: "CERT-2026-603" } },
     { params: { id: "CERT-2026-856" } },
-    { params: { id: "CERT-2026-912" } }
+    { params: { id: "CERT-2026-912" } },
+    { params: { id: "CERT-2026-21645245321245" } }
   ];
 }
 
