@@ -707,6 +707,32 @@ const certificates: Record<string, any> = {
     skills: ["Unity", "C#", "Разработка компьютерных игр", "Игровая физика", "Скриптинг", "Game Design"],
     verified: true
   },
+  "cert-25624-5535-52": {
+    id: "cert-25624-5535-52",
+    studentName: "Тутешев Алишер Нурланович",
+    courseName: "Frontend-разработчик",
+    description: `Курс включает в себя:
+• HTML — структура веб-страниц
+• CSS — стили и оформление
+• JavaScript — логика и интерактивность
+• Git — контроль версий
+• Адаптивная вёрстка — mobile-first, медиазапросы
+• React / Vue — фреймворки для UI
+• TypeScript — типизированный JavaScript
+• REST API — работа с бэкендом
+• Инструменты сборки — Webpack, Vite
+• Тестирование — Jest, unit-тесты
+• Деплой — публикация проектов (Vercel, Netlify)`,
+    completionDate: "12.05.2026",
+    issueDate: "12.05.2026",
+    duration: "120 часов",
+    grade: "Отлично",
+    instructor: "Назаров Д.С.",
+    skills: ["HTML", "CSS", "JavaScript", "TypeScript", "React", "Git", "REST API", "Адаптивная вёрстка", "Webpack/Vite", "Jest"],
+    verified: true,
+    period: "12.03.2026-12.05.2026",
+    deadline: "12.05.2029"
+  },
   "CERT-2020-117-52": {
     id: "CERT-2020-117-52",
     studentName: "Тутешева Назгуль Тлеугазиевна",
@@ -778,7 +804,8 @@ export async function getStaticPaths() {
     { params: { id: "CERT-2026-603" } },
     { params: { id: "CERT-2026-856" } },
     { params: { id: "CERT-2026-912" } },
-    { params: { id: "CERT-2026-21645245321245" } }
+    { params: { id: "CERT-2026-21645245321245" } },
+    { params: { id: "cert-25624-5535-52" } }
   ];
 }
 
